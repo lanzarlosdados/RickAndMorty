@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		065A0DA62A3E057100FDD060 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065A0DA52A3E057100FDD060 /* Coordinator.swift */; };
+		065A0DA82A3E071300FDD060 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065A0DA72A3E071300FDD060 /* AppCoordinator.swift */; };
+		065A0DAB2A3E0A1600FDD060 /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065A0DAA2A3E0A1600FDD060 /* AppFactory.swift */; };
+		065A0DAD2A3E0B2500FDD060 /* HomeMenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065A0DAC2A3E0B2500FDD060 /* HomeMenuCoordinator.swift */; };
 		06B9C7972A3A886F009C6FFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B9C7962A3A886F009C6FFD /* AppDelegate.swift */; };
 		06B9C7992A3A886F009C6FFD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B9C7982A3A886F009C6FFD /* SceneDelegate.swift */; };
 		06B9C79B2A3A886F009C6FFD /* HomeMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B9C79A2A3A886F009C6FFD /* HomeMenuController.swift */; };
@@ -33,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		065A0DA52A3E057100FDD060 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		065A0DA72A3E071300FDD060 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		065A0DAA2A3E0A1600FDD060 /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
+		065A0DAC2A3E0B2500FDD060 /* HomeMenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuCoordinator.swift; sourceTree = "<group>"; };
 		06B9C7932A3A886F009C6FFD /* RickyAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickyAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06B9C7962A3A886F009C6FFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06B9C7982A3A886F009C6FFD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -261,6 +269,7 @@
 		06B9C7D72A3A8CE5009C6FFD /* Factories */ = {
 			isa = PBXGroup;
 			children = (
+				065A0DAA2A3E0A1600FDD060 /* AppFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -277,6 +286,8 @@
 		06B9C7D92A3A8D22009C6FFD /* AppCoordinator */ = {
 			isa = PBXGroup;
 			children = (
+				065A0DA52A3E057100FDD060 /* Coordinator.swift */,
+				065A0DA72A3E071300FDD060 /* AppCoordinator.swift */,
 			);
 			path = AppCoordinator;
 			sourceTree = "<group>";
@@ -284,6 +295,7 @@
 		06B9C7DA2A3A8D33009C6FFD /* CoordinatorScreens */ = {
 			isa = PBXGroup;
 			children = (
+				065A0DAC2A3E0B2500FDD060 /* HomeMenuCoordinator.swift */,
 			);
 			path = CoordinatorScreens;
 			sourceTree = "<group>";
@@ -504,8 +516,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				065A0DA62A3E057100FDD060 /* Coordinator.swift in Sources */,
 				06B9C79B2A3A886F009C6FFD /* HomeMenuController.swift in Sources */,
+				065A0DA82A3E071300FDD060 /* AppCoordinator.swift in Sources */,
+				065A0DAD2A3E0B2500FDD060 /* HomeMenuCoordinator.swift in Sources */,
 				06B9C7972A3A886F009C6FFD /* AppDelegate.swift in Sources */,
+				065A0DAB2A3E0A1600FDD060 /* AppFactory.swift in Sources */,
 				06B9C7992A3A886F009C6FFD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
