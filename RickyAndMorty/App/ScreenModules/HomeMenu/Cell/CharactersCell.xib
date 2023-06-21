@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CharactersCell" customModule="RickyAndMorty" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="143" height="142"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="143" height="142"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="characters" translatesAutoresizingMaskIntoConstraints="NO" id="u0g-tR-32v">
+                        <rect key="frame" x="0.0" y="59" width="143" height="83"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lB5-Mj-rqG">
+                        <rect key="frame" x="0.0" y="121" width="143" height="21"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.30123299319727892" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="lB5-Mj-rqG" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="5cl-LW-VWH"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="leading" secondItem="u0g-tR-32v" secondAttribute="leading" id="Ejo-t4-o8Q"/>
+                <constraint firstItem="lB5-Mj-rqG" firstAttribute="bottom" secondItem="gTV-IL-0wX" secondAttribute="bottom" id="Umu-BL-YQy"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="lB5-Mj-rqG" secondAttribute="trailing" id="ccb-qO-dKQ"/>
+                <constraint firstItem="u0g-tR-32v" firstAttribute="trailing" secondItem="ZTg-uK-7eu" secondAttribute="trailing" id="qPw-T0-qhq"/>
+                <constraint firstItem="u0g-tR-32v" firstAttribute="bottom" secondItem="gTV-IL-0wX" secondAttribute="bottom" id="qvK-fH-cuG"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="top" secondItem="u0g-tR-32v" secondAttribute="top" id="xZ5-36-00p"/>
+            </constraints>
+            <size key="customSize" width="143" height="142"/>
+            <connections>
+                <outlet property="imageCell" destination="u0g-tR-32v" id="Xxd-wb-Ie8"/>
+            </connections>
+            <point key="canvasLocation" x="96.946564885496173" y="52.816901408450704"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="characters" width="681" height="964"/>
+    </resources>
+</document>

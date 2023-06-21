@@ -15,7 +15,7 @@ protocol HomeFactory {
 struct HomeFactoryImp : HomeFactory {
     
     func makeModule() -> UIViewController {
-        return HomeMenuController()
+        return HomeMenuViewController()
     }
     
     

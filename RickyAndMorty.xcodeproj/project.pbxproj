@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		063F94902A426C7600F6EF4D /* DequeuableRegistrableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063F948F2A426C7600F6EF4D /* DequeuableRegistrableCell.swift */; };
+		063F94942A426E6500F6EF4D /* CharactersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063F94922A426E6500F6EF4D /* CharactersCell.swift */; };
+		063F94952A426E6500F6EF4D /* CharactersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 063F94932A426E6500F6EF4D /* CharactersCell.xib */; };
+		063F949B2A426EDD00F6EF4D /* HomeMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063F94992A426EDD00F6EF4D /* HomeMenuViewController.swift */; };
+		063F949C2A426EDD00F6EF4D /* HomeMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 063F949A2A426EDD00F6EF4D /* HomeMenuViewController.xib */; };
 		065A0DA62A3E057100FDD060 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065A0DA52A3E057100FDD060 /* Coordinator.swift */; };
 		065A0DA82A3E071300FDD060 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065A0DA72A3E071300FDD060 /* AppCoordinator.swift */; };
 		065A0DAB2A3E0A1600FDD060 /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065A0DAA2A3E0A1600FDD060 /* AppFactory.swift */; };
@@ -14,7 +19,6 @@
 		065A0DAF2A3E375200FDD060 /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065A0DAE2A3E375200FDD060 /* HomeFactory.swift */; };
 		06B9C7972A3A886F009C6FFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B9C7962A3A886F009C6FFD /* AppDelegate.swift */; };
 		06B9C7992A3A886F009C6FFD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B9C7982A3A886F009C6FFD /* SceneDelegate.swift */; };
-		06B9C79B2A3A886F009C6FFD /* HomeMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B9C79A2A3A886F009C6FFD /* HomeMenuController.swift */; };
 		06B9C7A02A3A8871009C6FFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06B9C79F2A3A8871009C6FFD /* Assets.xcassets */; };
 		06B9C7A32A3A8871009C6FFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06B9C7A12A3A8871009C6FFD /* LaunchScreen.storyboard */; };
 		06B9C7AE2A3A8871009C6FFD /* RickyAndMortyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B9C7AD2A3A8871009C6FFD /* RickyAndMortyTests.swift */; };
@@ -38,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		063F948F2A426C7600F6EF4D /* DequeuableRegistrableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DequeuableRegistrableCell.swift; sourceTree = "<group>"; };
+		063F94922A426E6500F6EF4D /* CharactersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCell.swift; sourceTree = "<group>"; };
+		063F94932A426E6500F6EF4D /* CharactersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharactersCell.xib; sourceTree = "<group>"; };
+		063F94992A426EDD00F6EF4D /* HomeMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuViewController.swift; sourceTree = "<group>"; };
+		063F949A2A426EDD00F6EF4D /* HomeMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeMenuViewController.xib; sourceTree = "<group>"; };
 		065A0DA52A3E057100FDD060 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		065A0DA72A3E071300FDD060 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		065A0DAA2A3E0A1600FDD060 /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
@@ -46,7 +55,6 @@
 		06B9C7932A3A886F009C6FFD /* RickyAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickyAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06B9C7962A3A886F009C6FFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06B9C7982A3A886F009C6FFD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		06B9C79A2A3A886F009C6FFD /* HomeMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuController.swift; sourceTree = "<group>"; };
 		06B9C79F2A3A8871009C6FFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06B9C7A22A3A8871009C6FFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06B9C7A42A3A8871009C6FFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,6 +88,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		063F94912A426E0700F6EF4D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				063F94922A426E6500F6EF4D /* CharactersCell.swift */,
+				063F94932A426E6500F6EF4D /* CharactersCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		06B9C78A2A3A886F009C6FFD = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +227,7 @@
 		06B9C7CF2A3A8C41009C6FFD /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				063F948F2A426C7600F6EF4D /* DequeuableRegistrableCell.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -355,7 +373,9 @@
 		06B9C7E22A3A8ED3009C6FFD /* HomeMenu */ = {
 			isa = PBXGroup;
 			children = (
-				06B9C79A2A3A886F009C6FFD /* HomeMenuController.swift */,
+				063F94912A426E0700F6EF4D /* Cell */,
+				063F94992A426EDD00F6EF4D /* HomeMenuViewController.swift */,
+				063F949A2A426EDD00F6EF4D /* HomeMenuViewController.xib */,
 			);
 			path = HomeMenu;
 			sourceTree = "<group>";
@@ -493,8 +513,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				063F949C2A426EDD00F6EF4D /* HomeMenuViewController.xib in Resources */,
 				06B9C7A32A3A8871009C6FFD /* LaunchScreen.storyboard in Resources */,
 				06B9C7A02A3A8871009C6FFD /* Assets.xcassets in Resources */,
+				063F94952A426E6500F6EF4D /* CharactersCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,13 +542,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				065A0DA62A3E057100FDD060 /* Coordinator.swift in Sources */,
-				06B9C79B2A3A886F009C6FFD /* HomeMenuController.swift in Sources */,
 				065A0DA82A3E071300FDD060 /* AppCoordinator.swift in Sources */,
 				065A0DAD2A3E0B2500FDD060 /* HomeCoordinator.swift in Sources */,
 				06B9C7972A3A886F009C6FFD /* AppDelegate.swift in Sources */,
+				063F949B2A426EDD00F6EF4D /* HomeMenuViewController.swift in Sources */,
 				065A0DAF2A3E375200FDD060 /* HomeFactory.swift in Sources */,
 				065A0DAB2A3E0A1600FDD060 /* AppFactory.swift in Sources */,
 				06B9C7992A3A886F009C6FFD /* SceneDelegate.swift in Sources */,
+				063F94902A426C7600F6EF4D /* DequeuableRegistrableCell.swift in Sources */,
+				063F94942A426E6500F6EF4D /* CharactersCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
