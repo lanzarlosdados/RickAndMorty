@@ -23,6 +23,8 @@
 		067BED542A5EEBF700AA1B19 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067BED532A5EEBF700AA1B19 /* NetworkError.swift */; };
 		067BED572A5EED4600AA1B19 /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067BED562A5EED4600AA1B19 /* RequestModel.swift */; };
 		067BED592A5EEDB000AA1B19 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067BED582A5EEDB000AA1B19 /* Constants.swift */; };
+		067BED5B2A5F1CE700AA1B19 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067BED5A2A5F1CE700AA1B19 /* Utils.swift */; };
+		067BED5E2A5F1DA700AA1B19 /* MenuItems.json in Sources */ = {isa = PBXBuildFile; fileRef = 067BED5D2A5F1DA700AA1B19 /* MenuItems.json */; };
 		06B9C7972A3A886F009C6FFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B9C7962A3A886F009C6FFD /* AppDelegate.swift */; };
 		06B9C7992A3A886F009C6FFD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B9C7982A3A886F009C6FFD /* SceneDelegate.swift */; };
 		06B9C7A02A3A8871009C6FFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06B9C79F2A3A8871009C6FFD /* Assets.xcassets */; };
@@ -64,6 +66,8 @@
 		067BED532A5EEBF700AA1B19 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		067BED562A5EED4600AA1B19 /* RequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
 		067BED582A5EEDB000AA1B19 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		067BED5A2A5F1CE700AA1B19 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		067BED5D2A5F1DA700AA1B19 /* MenuItems.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MenuItems.json; sourceTree = "<group>"; };
 		06B9C7932A3A886F009C6FFD /* RickyAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickyAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06B9C7962A3A886F009C6FFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06B9C7982A3A886F009C6FFD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +145,14 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		067BED5C2A5F1D3C00AA1B19 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				067BED5D2A5F1DA700AA1B19 /* MenuItems.json */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		06B9C78A2A3A886F009C6FFD = {
@@ -299,6 +311,8 @@
 		06B9C7D22A3A8C6C009C6FFD /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				067BED5C2A5F1D3C00AA1B19 /* Mock */,
+				067BED5A2A5F1CE700AA1B19 /* Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -568,6 +582,7 @@
 				067BED572A5EED4600AA1B19 /* RequestModel.swift in Sources */,
 				067BED512A5EEB4F00AA1B19 /* ServiceLayer.swift in Sources */,
 				063F949B2A426EDD00F6EF4D /* HomeMenuViewController.swift in Sources */,
+				067BED5B2A5F1CE700AA1B19 /* Utils.swift in Sources */,
 				065A0DAF2A3E375200FDD060 /* HomeFactory.swift in Sources */,
 				065A0DAB2A3E0A1600FDD060 /* AppFactory.swift in Sources */,
 				067BED462A5DBD4500AA1B19 /* MenuRepositoryImp.swift in Sources */,
@@ -575,6 +590,7 @@
 				06B9C7992A3A886F009C6FFD /* SceneDelegate.swift in Sources */,
 				063F94902A426C7600F6EF4D /* DequeuableRegistrableCell.swift in Sources */,
 				063F94942A426E6500F6EF4D /* CharactersCell.swift in Sources */,
+				067BED5E2A5F1DA700AA1B19 /* MenuItems.json in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

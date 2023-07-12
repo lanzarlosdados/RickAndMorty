@@ -1,0 +1,16 @@
+{
+    [
+        {
+            "title" : "Characters",
+            "imageName" : "characters"
+        },
+        {
+            "title" : "Locations",
+            "imageName" : "locations"
+        },
+        {
+            "title" : "Episodes",
+            "imageName" : "episodes"
+        }
+    ]
+}
