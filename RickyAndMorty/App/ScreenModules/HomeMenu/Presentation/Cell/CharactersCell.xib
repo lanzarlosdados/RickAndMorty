@@ -16,10 +16,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="143" height="142"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="characters" translatesAutoresizingMaskIntoConstraints="NO" id="u0g-tR-32v">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="u0g-tR-32v">
                         <rect key="frame" x="0.0" y="59" width="143" height="83"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lB5-Mj-rqG">
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lB5-Mj-rqG">
                         <rect key="frame" x="0.0" y="121" width="143" height="21"/>
                         <color key="backgroundColor" white="0.0" alpha="0.30123299319727892" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -41,11 +41,12 @@
             <size key="customSize" width="143" height="142"/>
             <connections>
                 <outlet property="imageCell" destination="u0g-tR-32v" id="Xxd-wb-Ie8"/>
+                <outlet property="tilteImage" destination="lB5-Mj-rqG" id="5sS-lb-BO3"/>
             </connections>
             <point key="canvasLocation" x="96.946564885496173" y="52.816901408450704"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="characters" width="681" height="964"/>
+        <image name="default" width="300" height="300"/>
     </resources>
 </document>

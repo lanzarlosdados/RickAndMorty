@@ -17,6 +17,12 @@
 		065A0DAB2A3E0A1600FDD060 /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065A0DAA2A3E0A1600FDD060 /* AppFactory.swift */; };
 		065A0DAD2A3E0B2500FDD060 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065A0DAC2A3E0B2500FDD060 /* HomeCoordinator.swift */; };
 		065A0DAF2A3E375200FDD060 /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065A0DAE2A3E375200FDD060 /* HomeFactory.swift */; };
+		067BED422A5DBC9300AA1B19 /* MenuRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067BED412A5DBC9300AA1B19 /* MenuRepository.swift */; };
+		067BED462A5DBD4500AA1B19 /* MenuRepositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067BED452A5DBD4500AA1B19 /* MenuRepositoryImp.swift */; };
+		067BED512A5EEB4F00AA1B19 /* ServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067BED502A5EEB4F00AA1B19 /* ServiceLayer.swift */; };
+		067BED542A5EEBF700AA1B19 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067BED532A5EEBF700AA1B19 /* NetworkError.swift */; };
+		067BED572A5EED4600AA1B19 /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067BED562A5EED4600AA1B19 /* RequestModel.swift */; };
+		067BED592A5EEDB000AA1B19 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067BED582A5EEDB000AA1B19 /* Constants.swift */; };
 		06B9C7972A3A886F009C6FFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B9C7962A3A886F009C6FFD /* AppDelegate.swift */; };
 		06B9C7992A3A886F009C6FFD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B9C7982A3A886F009C6FFD /* SceneDelegate.swift */; };
 		06B9C7A02A3A8871009C6FFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06B9C79F2A3A8871009C6FFD /* Assets.xcassets */; };
@@ -52,6 +58,12 @@
 		065A0DAA2A3E0A1600FDD060 /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
 		065A0DAC2A3E0B2500FDD060 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		065A0DAE2A3E375200FDD060 /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
+		067BED412A5DBC9300AA1B19 /* MenuRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRepository.swift; sourceTree = "<group>"; };
+		067BED452A5DBD4500AA1B19 /* MenuRepositoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRepositoryImp.swift; sourceTree = "<group>"; };
+		067BED502A5EEB4F00AA1B19 /* ServiceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLayer.swift; sourceTree = "<group>"; };
+		067BED532A5EEBF700AA1B19 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		067BED562A5EED4600AA1B19 /* RequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
+		067BED582A5EEDB000AA1B19 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		06B9C7932A3A886F009C6FFD /* RickyAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickyAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06B9C7962A3A886F009C6FFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06B9C7982A3A886F009C6FFD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +109,40 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		067BED3B2A5DBA6400AA1B19 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				063F94912A426E0700F6EF4D /* Cell */,
+				063F94992A426EDD00F6EF4D /* HomeMenuViewController.swift */,
+				063F949A2A426EDD00F6EF4D /* HomeMenuViewController.xib */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		067BED3D2A5DBA7B00AA1B19 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				067BED402A5DBC6600AA1B19 /* InterfacesRepository */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		067BED402A5DBC6600AA1B19 /* InterfacesRepository */ = {
+			isa = PBXGroup;
+			children = (
+				067BED412A5DBC9300AA1B19 /* MenuRepository.swift */,
+				067BED452A5DBD4500AA1B19 /* MenuRepositoryImp.swift */,
+			);
+			path = InterfacesRepository;
+			sourceTree = "<group>";
+		};
+		067BED4C2A5DE00F00AA1B19 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		06B9C78A2A3A886F009C6FFD = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +182,7 @@
 		06B9C7C62A3A8B7C009C6FFD /* App */ = {
 			isa = PBXGroup;
 			children = (
+				067BED4C2A5DE00F00AA1B19 /* Model */,
 				06B9C7CC2A3A8BF7009C6FFD /* Storage */,
 				06B9C7CB2A3A8BE7009C6FFD /* ScreenModules */,
 				06B9C7CA2A3A8BDE009C6FFD /* Resources */,
@@ -172,10 +219,9 @@
 		06B9C7C92A3A8BC6009C6FFD /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				06B9C7DE2A3A8E0D009C6FFD /* StatusResponse */,
-				06B9C7DD2A3A8DFD009C6FFD /* Implementations */,
-				06B9C7DC2A3A8DF2009C6FFD /* Errors */,
-				06B9C7DB2A3A8DE7009C6FFD /* ApiService */,
+				067BED502A5EEB4F00AA1B19 /* ServiceLayer.swift */,
+				067BED532A5EEBF700AA1B19 /* NetworkError.swift */,
+				067BED562A5EED4600AA1B19 /* RequestModel.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -220,6 +266,7 @@
 		06B9C7CE2A3A8C28009C6FFD /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				067BED582A5EEDB000AA1B19 /* Constants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -321,34 +368,6 @@
 			path = CoordinatorScreens;
 			sourceTree = "<group>";
 		};
-		06B9C7DB2A3A8DE7009C6FFD /* ApiService */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ApiService;
-			sourceTree = "<group>";
-		};
-		06B9C7DC2A3A8DF2009C6FFD /* Errors */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Errors;
-			sourceTree = "<group>";
-		};
-		06B9C7DD2A3A8DFD009C6FFD /* Implementations */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Implementations;
-			sourceTree = "<group>";
-		};
-		06B9C7DE2A3A8E0D009C6FFD /* StatusResponse */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = StatusResponse;
-			sourceTree = "<group>";
-		};
 		06B9C7DF2A3A8EAE009C6FFD /* CharacterDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -373,9 +392,8 @@
 		06B9C7E22A3A8ED3009C6FFD /* HomeMenu */ = {
 			isa = PBXGroup;
 			children = (
-				063F94912A426E0700F6EF4D /* Cell */,
-				063F94992A426EDD00F6EF4D /* HomeMenuViewController.swift */,
-				063F949A2A426EDD00F6EF4D /* HomeMenuViewController.xib */,
+				067BED3D2A5DBA7B00AA1B19 /* Domain */,
+				067BED3B2A5DBA6400AA1B19 /* Presentation */,
 			);
 			path = HomeMenu;
 			sourceTree = "<group>";
@@ -542,12 +560,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				065A0DA62A3E057100FDD060 /* Coordinator.swift in Sources */,
+				067BED542A5EEBF700AA1B19 /* NetworkError.swift in Sources */,
 				065A0DA82A3E071300FDD060 /* AppCoordinator.swift in Sources */,
+				067BED592A5EEDB000AA1B19 /* Constants.swift in Sources */,
 				065A0DAD2A3E0B2500FDD060 /* HomeCoordinator.swift in Sources */,
 				06B9C7972A3A886F009C6FFD /* AppDelegate.swift in Sources */,
+				067BED572A5EED4600AA1B19 /* RequestModel.swift in Sources */,
+				067BED512A5EEB4F00AA1B19 /* ServiceLayer.swift in Sources */,
 				063F949B2A426EDD00F6EF4D /* HomeMenuViewController.swift in Sources */,
 				065A0DAF2A3E375200FDD060 /* HomeFactory.swift in Sources */,
 				065A0DAB2A3E0A1600FDD060 /* AppFactory.swift in Sources */,
+				067BED462A5DBD4500AA1B19 /* MenuRepositoryImp.swift in Sources */,
+				067BED422A5DBC9300AA1B19 /* MenuRepository.swift in Sources */,
 				06B9C7992A3A886F009C6FFD /* SceneDelegate.swift in Sources */,
 				063F94902A426C7600F6EF4D /* DequeuableRegistrableCell.swift in Sources */,
 				063F94942A426E6500F6EF4D /* CharactersCell.swift in Sources */,
