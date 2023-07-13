@@ -1,5 +1,5 @@
 {
-    [
+    "menuItems": [
         {
             "title" : "Characters",
             "imageName" : "characters"

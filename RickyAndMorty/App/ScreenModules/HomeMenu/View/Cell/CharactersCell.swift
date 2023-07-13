@@ -21,5 +21,9 @@ class CharactersCell: UICollectionViewCell {
         tilteImage.layer.cornerRadius = CGFloat(CORNER_RADIUS)
         tilteImage.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
     }
-
+    
+    func configCell(menuItem : MenuItem) {
+        tilteImage.text = menuItem.title
+        imageCell.image = UIImage(named: menuItem.imageName)
+    }
 }
