@@ -7,7 +7,7 @@
 // hola como estas
 import Foundation
 // MARK: - Welcome
-struct Welcome: Codable {
+struct Characters : Codable {
     let info: Info
     let results: [Result]
 }
