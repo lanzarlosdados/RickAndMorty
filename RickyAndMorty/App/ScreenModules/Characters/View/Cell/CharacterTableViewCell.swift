@@ -4,11 +4,11 @@
 //
 //  Created by fabian zarate on 15/07/2023.
 //
-
+import Kingfisher
 import UIKit
 
 class CharacterTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var imageCharacter: UIImageView!
     @IBOutlet weak var statusView: UIView!
     @IBOutlet weak var characterName: UILabel!
@@ -19,10 +19,10 @@ class CharacterTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
@@ -32,5 +32,9 @@ class CharacterTableViewCell: UITableViewCell {
         lastKnowLocation.text = character.location.name
         firstSeenIn.text = character.origin.name
         statusView.backgroundColor = (character.status == Status.alive) ? UIColor.green : UIColor.red
+        
+        let imageUrl = URL(string: character.image)
+        imageCharacter.kf.setImage(with: imageUrl)
     }
+    
 }
