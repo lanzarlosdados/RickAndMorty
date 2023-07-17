@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeMenuViewController: UIViewController {
+final class HomeMenuViewController: UIViewController {
     
     lazy var presenter = HomeMenuItemPresenter(delegate: self)
     private var menuItems : [MenuItem] = []
