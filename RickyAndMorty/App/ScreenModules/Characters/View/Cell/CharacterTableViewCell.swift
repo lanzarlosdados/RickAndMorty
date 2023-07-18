@@ -15,17 +15,13 @@ class CharacterTableViewCell: UITableViewCell {
     @IBOutlet weak var characterStatusAndLocation: UILabel!
     @IBOutlet weak var lastKnowLocation: UILabel!
     @IBOutlet weak var firstSeenIn: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
-    
+
     func configCell(character : Result) {
         characterName.text = character.name
         characterStatusAndLocation.text = " \(character.status.rawValue) - \(character.species.rawValue) "
