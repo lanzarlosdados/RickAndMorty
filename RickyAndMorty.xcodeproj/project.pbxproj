@@ -14,6 +14,7 @@
 		0654BAC22A62EF8E00DA348B /* CharactersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0654BAC02A62EF8E00DA348B /* CharactersViewController.xib */; };
 		0654BACA2A62F2C600DA348B /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654BAC82A62F2C600DA348B /* CharacterTableViewCell.swift */; };
 		0654BACB2A62F2C600DA348B /* CharacterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0654BAC92A62F2C600DA348B /* CharacterTableViewCell.xib */; };
+		0656FA862A69F38400AA0CB8 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656FA852A69F38400AA0CB8 /* TabBar.swift */; };
 		065AE9E62A6580D800A0E9CF /* CharactersProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065AE9E52A6580D800A0E9CF /* CharactersProviderProtocol.swift */; };
 		065AE9E82A65875300A0E9CF /* CharactersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065AE9E72A65875300A0E9CF /* CharactersPresenter.swift */; };
 		065AE9EB2A66065D00A0E9CF /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065AE9E92A66065D00A0E9CF /* CharacterDetailViewController.swift */; };
@@ -81,6 +82,7 @@
 		0654BAC02A62EF8E00DA348B /* CharactersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharactersViewController.xib; sourceTree = "<group>"; };
 		0654BAC82A62F2C600DA348B /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
 		0654BAC92A62F2C600DA348B /* CharacterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterTableViewCell.xib; sourceTree = "<group>"; };
+		0656FA852A69F38400AA0CB8 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		065A0DA52A3E057100FDD060 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		065A0DA72A3E071300FDD060 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		065A0DAA2A3E0A1600FDD060 /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
@@ -204,6 +206,14 @@
 				0654BAC92A62F2C600DA348B /* CharacterTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		0656FA842A69F35700AA0CB8 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				0656FA852A69F38400AA0CB8 /* TabBar.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		065AE9ED2A660A1C00A0E9CF /* Cell */ = {
@@ -364,6 +374,7 @@
 		06B9C7CB2A3A8BE7009C6FFD /* ScreenModules */ = {
 			isa = PBXGroup;
 			children = (
+				0656FA842A69F35700AA0CB8 /* TabBar */,
 				06B9C7E62A3A9060009C6FFD /* LaunchScreen */,
 				06B9C7E52A3A8F50009C6FFD /* LocationDetail */,
 				06B9C7E42A3A8F39009C6FFD /* Origin */,
@@ -850,6 +861,7 @@
 				0654BACA2A62F2C600DA348B /* CharacterTableViewCell.swift in Sources */,
 				0654BAC12A62EF8E00DA348B /* CharactersViewController.swift in Sources */,
 				067BED882A5F729D00AA1B19 /* RequestModel.swift in Sources */,
+				0656FA862A69F38400AA0CB8 /* TabBar.swift in Sources */,
 				067BED892A5F729D00AA1B19 /* SceneDelegate.swift in Sources */,
 				067BED8A2A5F729D00AA1B19 /* AppDelegate.swift in Sources */,
 				065AE9EB2A66065D00A0E9CF /* CharacterDetailViewController.swift in Sources */,
