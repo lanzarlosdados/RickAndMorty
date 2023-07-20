@@ -48,4 +48,10 @@ extension CharactersViewController:  UITableViewDataSource, UITableViewDelegate 
         cell.configCell(character: characters[indexPath.row])
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = CharacterDetailViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+
 }

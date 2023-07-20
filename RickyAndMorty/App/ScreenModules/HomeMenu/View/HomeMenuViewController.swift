@@ -45,6 +45,13 @@ extension HomeMenuViewController : UICollectionViewDataSource, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width/2.2, height: 150.0)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = CharactersViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+        print("categoria",menuItems[indexPath.row])
+    }
+    
 }
 
 extension HomeMenuViewController : HomeMenuViewProtocol {

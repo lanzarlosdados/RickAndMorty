@@ -22,6 +22,10 @@
 		065AE9F12A660A4400A0E9CF /* CharacterDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 065AE9EF2A660A4400A0E9CF /* CharacterDetailTableViewCell.xib */; };
 		065AE9F42A660A7600A0E9CF /* EpisodesDescripcionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065AE9F22A660A7600A0E9CF /* EpisodesDescripcionTableViewCell.swift */; };
 		065AE9F52A660A7600A0E9CF /* EpisodesDescripcionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 065AE9F32A660A7600A0E9CF /* EpisodesDescripcionTableViewCell.xib */; };
+		0663503E2A67638F00F78A83 /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0663503C2A67638F00F78A83 /* EpisodesViewController.swift */; };
+		0663503F2A67638F00F78A83 /* EpisodesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0663503D2A67638F00F78A83 /* EpisodesViewController.xib */; };
+		066350422A67639F00F78A83 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066350402A67639F00F78A83 /* LocationsViewController.swift */; };
+		066350432A67639F00F78A83 /* LocationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 066350412A67639F00F78A83 /* LocationsViewController.xib */; };
 		067BED812A5F729D00AA1B19 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067BED5F2A5F200600AA1B19 /* MenuItem.swift */; };
 		067BED822A5F729D00AA1B19 /* HomeMenuItemProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067BED652A5F217700AA1B19 /* HomeMenuItemProvider.swift */; };
 		067BED832A5F729D00AA1B19 /* HomeMenuItemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067BED672A5F23CC00AA1B19 /* HomeMenuItemPresenter.swift */; };
@@ -90,6 +94,10 @@
 		065AE9EF2A660A4400A0E9CF /* CharacterDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterDetailTableViewCell.xib; sourceTree = "<group>"; };
 		065AE9F22A660A7600A0E9CF /* EpisodesDescripcionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesDescripcionTableViewCell.swift; sourceTree = "<group>"; };
 		065AE9F32A660A7600A0E9CF /* EpisodesDescripcionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodesDescripcionTableViewCell.xib; sourceTree = "<group>"; };
+		0663503C2A67638F00F78A83 /* EpisodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewController.swift; sourceTree = "<group>"; };
+		0663503D2A67638F00F78A83 /* EpisodesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodesViewController.xib; sourceTree = "<group>"; };
+		066350402A67639F00F78A83 /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
+		066350412A67639F00F78A83 /* LocationsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationsViewController.xib; sourceTree = "<group>"; };
 		067BED502A5EEB4F00AA1B19 /* ServiceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLayer.swift; sourceTree = "<group>"; };
 		067BED532A5EEBF700AA1B19 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		067BED562A5EED4600AA1B19 /* RequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
@@ -512,6 +520,8 @@
 		06B9C7E12A3A8EC4009C6FFD /* Episodes */ = {
 			isa = PBXGroup;
 			children = (
+				0663503C2A67638F00F78A83 /* EpisodesViewController.swift */,
+				0663503D2A67638F00F78A83 /* EpisodesViewController.xib */,
 			);
 			path = Episodes;
 			sourceTree = "<group>";
@@ -529,6 +539,8 @@
 		06B9C7E32A3A8EE0009C6FFD /* Locations */ = {
 			isa = PBXGroup;
 			children = (
+				066350402A67639F00F78A83 /* LocationsViewController.swift */,
+				066350412A67639F00F78A83 /* LocationsViewController.xib */,
 			);
 			path = Locations;
 			sourceTree = "<group>";
@@ -689,11 +701,13 @@
 				0654BAC22A62EF8E00DA348B /* CharactersViewController.xib in Resources */,
 				063F949C2A426EDD00F6EF4D /* HomeMenuViewController.xib in Resources */,
 				06B9C7A32A3A8871009C6FFD /* LaunchScreen.storyboard in Resources */,
+				066350432A67639F00F78A83 /* LocationsViewController.xib in Resources */,
 				065AE9EC2A66065D00A0E9CF /* CharacterDetailViewController.xib in Resources */,
 				06B9C7A02A3A8871009C6FFD /* Assets.xcassets in Resources */,
 				065AE9F52A660A7600A0E9CF /* EpisodesDescripcionTableViewCell.xib in Resources */,
 				065AE9F12A660A4400A0E9CF /* CharacterDetailTableViewCell.xib in Resources */,
 				063F94952A426E6500F6EF4D /* CharactersCell.xib in Resources */,
+				0663503F2A67638F00F78A83 /* EpisodesViewController.xib in Resources */,
 				0654BACB2A62F2C600DA348B /* CharacterTableViewCell.xib in Resources */,
 				067BED952A5F7D4100AA1B19 /* File.json in Resources */,
 			);
@@ -830,6 +844,7 @@
 				067BED852A5F729D00AA1B19 /* HomeMenuViewController.swift in Sources */,
 				065AE9F42A660A7600A0E9CF /* EpisodesDescripcionTableViewCell.swift in Sources */,
 				067BED862A5F729D00AA1B19 /* ServiceLayer.swift in Sources */,
+				066350422A67639F00F78A83 /* LocationsViewController.swift in Sources */,
 				067BED872A5F729D00AA1B19 /* NetworkError.swift in Sources */,
 				0654BABE2A62E7C000DA348B /* Characters.swift in Sources */,
 				0654BACA2A62F2C600DA348B /* CharacterTableViewCell.swift in Sources */,
@@ -844,6 +859,7 @@
 				065AE9E82A65875300A0E9CF /* CharactersPresenter.swift in Sources */,
 				067BED8C2A5F729D00AA1B19 /* HomeFactory.swift in Sources */,
 				067BED8D2A5F729D00AA1B19 /* HomeCoordinator.swift in Sources */,
+				0663503E2A67638F00F78A83 /* EpisodesViewController.swift in Sources */,
 				067BED8E2A5F729D00AA1B19 /* Coordinator.swift in Sources */,
 				067BED8F2A5F729D00AA1B19 /* AppCoordinator.swift in Sources */,
 				067BED902A5F729D00AA1B19 /* Utils.swift in Sources */,
