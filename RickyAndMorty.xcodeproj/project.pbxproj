@@ -15,6 +15,8 @@
 		0654BACA2A62F2C600DA348B /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654BAC82A62F2C600DA348B /* CharacterTableViewCell.swift */; };
 		0654BACB2A62F2C600DA348B /* CharacterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0654BAC92A62F2C600DA348B /* CharacterTableViewCell.xib */; };
 		0656FA862A69F38400AA0CB8 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656FA852A69F38400AA0CB8 /* TabBar.swift */; };
+		0656FA8B2A6A060D00AA0CB8 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656FA892A6A060D00AA0CB8 /* LocationCell.swift */; };
+		0656FA8C2A6A060D00AA0CB8 /* LocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0656FA8A2A6A060D00AA0CB8 /* LocationCell.xib */; };
 		065AE9E62A6580D800A0E9CF /* CharactersProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065AE9E52A6580D800A0E9CF /* CharactersProviderProtocol.swift */; };
 		065AE9E82A65875300A0E9CF /* CharactersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065AE9E72A65875300A0E9CF /* CharactersPresenter.swift */; };
 		065AE9EB2A66065D00A0E9CF /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065AE9E92A66065D00A0E9CF /* CharacterDetailViewController.swift */; };
@@ -83,6 +85,8 @@
 		0654BAC82A62F2C600DA348B /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
 		0654BAC92A62F2C600DA348B /* CharacterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterTableViewCell.xib; sourceTree = "<group>"; };
 		0656FA852A69F38400AA0CB8 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		0656FA892A6A060D00AA0CB8 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		0656FA8A2A6A060D00AA0CB8 /* LocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationCell.xib; sourceTree = "<group>"; };
 		065A0DA52A3E057100FDD060 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		065A0DA72A3E071300FDD060 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		065A0DAA2A3E0A1600FDD060 /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
@@ -214,6 +218,15 @@
 				0656FA852A69F38400AA0CB8 /* TabBar.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		0656FA872A6A05A300AA0CB8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0656FA892A6A060D00AA0CB8 /* LocationCell.swift */,
+				0656FA8A2A6A060D00AA0CB8 /* LocationCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		065AE9ED2A660A1C00A0E9CF /* Cell */ = {
@@ -550,6 +563,7 @@
 		06B9C7E32A3A8EE0009C6FFD /* Locations */ = {
 			isa = PBXGroup;
 			children = (
+				0656FA872A6A05A300AA0CB8 /* Cell */,
 				066350402A67639F00F78A83 /* LocationsViewController.swift */,
 				066350412A67639F00F78A83 /* LocationsViewController.xib */,
 			);
@@ -712,6 +726,7 @@
 				0654BAC22A62EF8E00DA348B /* CharactersViewController.xib in Resources */,
 				063F949C2A426EDD00F6EF4D /* HomeMenuViewController.xib in Resources */,
 				06B9C7A32A3A8871009C6FFD /* LaunchScreen.storyboard in Resources */,
+				0656FA8C2A6A060D00AA0CB8 /* LocationCell.xib in Resources */,
 				066350432A67639F00F78A83 /* LocationsViewController.xib in Resources */,
 				065AE9EC2A66065D00A0E9CF /* CharacterDetailViewController.xib in Resources */,
 				06B9C7A02A3A8871009C6FFD /* Assets.xcassets in Resources */,
@@ -854,6 +869,7 @@
 				067BED842A5F729D00AA1B19 /* CharactersCell.swift in Sources */,
 				067BED852A5F729D00AA1B19 /* HomeMenuViewController.swift in Sources */,
 				065AE9F42A660A7600A0E9CF /* EpisodesDescripcionTableViewCell.swift in Sources */,
+				0656FA8B2A6A060D00AA0CB8 /* LocationCell.swift in Sources */,
 				067BED862A5F729D00AA1B19 /* ServiceLayer.swift in Sources */,
 				066350422A67639F00F78A83 /* LocationsViewController.swift in Sources */,
 				067BED872A5F729D00AA1B19 /* NetworkError.swift in Sources */,
