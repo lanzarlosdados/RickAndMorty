@@ -33,8 +33,6 @@ extension CharactersViewController: CharactersViewProtocol {
         tableView.reloadData()
         print("characters", list)
     }
-    
-    
 }
 
 extension CharactersViewController:  UITableViewDataSource, UITableViewDelegate {

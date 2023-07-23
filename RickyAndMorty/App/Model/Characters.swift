@@ -42,8 +42,13 @@ enum Gender: String, Codable {
 
 // MARK: - Location
 struct Location: Codable {
+    let id: Int?
     let name: String
+    let type : String?
+    let dimension : String?
+    let residents: [String]?
     let url: String
+    let created: String?
 }
 
 enum Species: String, Codable {
