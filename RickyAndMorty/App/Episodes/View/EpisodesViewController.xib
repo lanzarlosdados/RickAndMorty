@@ -20,19 +20,28 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2XR-Hh-cxg">
-                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <rect key="frame" x="0.0" y="97.666666666666686" width="393" height="720.33333333333326"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episodes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kle-el-bf4">
+                    <rect key="frame" x="0.0" y="58.999999999999993" width="393" height="28.666666666666664"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="2XR-Hh-cxg" firstAttribute="top" secondItem="kle-el-bf4" secondAttribute="bottom" constant="10" id="Cho-dA-IS4"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="2XR-Hh-cxg" secondAttribute="bottom" id="Nqb-gy-edi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kle-el-bf4" secondAttribute="trailing" id="Xdn-5i-FBC"/>
+                <constraint firstItem="kle-el-bf4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="l6N-pO-B6V"/>
                 <constraint firstItem="2XR-Hh-cxg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mv0-4P-uQg"/>
-                <constraint firstItem="2XR-Hh-cxg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="rpZ-cX-wAc"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2XR-Hh-cxg" secondAttribute="trailing" id="vf1-aR-2iI"/>
+                <constraint firstItem="kle-el-bf4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ycJ-wD-om8"/>
             </constraints>
-            <point key="canvasLocation" x="100" y="20"/>
+            <point key="canvasLocation" x="100" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
