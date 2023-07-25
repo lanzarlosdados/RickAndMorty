@@ -49,6 +49,8 @@ extension CharactersViewController:  UITableViewDataSource, UITableViewDelegate 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = CharacterDetailViewController()
+        vc.characterId = String(characters[indexPath.row].id)
+        print(vc.characterId)
         self.navigationController?.pushViewController(vc, animated: true)
     }
 

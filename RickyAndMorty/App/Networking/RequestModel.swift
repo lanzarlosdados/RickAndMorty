@@ -9,12 +9,13 @@ import Foundation
 
 struct RequestModel  {
     let endpoint : Endpoints
+    var id : String = "" 
     var queryItems : [String:String]?
     let httpMethod : HttpMethod = .GET
     var baseUrl : URLBase = .rickAndMorty
     
     func getURL() -> String{
-        return baseUrl.rawValue + endpoint.rawValue
+        return baseUrl.rawValue + endpoint.rawValue + id
     }
     
     enum HttpMethod : String{
@@ -23,9 +24,9 @@ struct RequestModel  {
     }
 
     enum Endpoints : String   {
-        case character = "/character"
-        case location = "/location"
-        case episode = "/episode"
+        case character = "/character/"
+        case location = "/location/"
+        case episode = "/episode/"
     }
 
     enum URLBase : String{

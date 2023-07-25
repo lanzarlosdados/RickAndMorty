@@ -11,9 +11,19 @@ class CharacterDetailViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    
+    lazy var presenter = CharacterDetailPresenter(delegate: self)
+    private var dataObject : [[Any]] = []
+    private var dataSectionTitleList : [String] = []
+    var characterId = ""
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
+        Task{
+            await presenter.getCharacterById(id:characterId)
+        }
     }
     
     func configTableView(){
@@ -25,6 +35,19 @@ class CharacterDetailViewController: UIViewController {
                             ])
     }
 
+}
+
+extension CharacterDetailViewController : CharacterDetailViewProtocol {
+    
+    func getData(list: [[Any]], sectionTitleList: [String]) {
+        
+        dataObject = list
+        dataSectionTitleList = sectionTitleList
+        print(list)
+//        tableView.reloadData()
+
+    }
+    
 }
 
 extension CharacterDetailViewController : UITableViewDelegate, UITableViewDataSource {
