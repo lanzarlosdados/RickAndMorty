@@ -9,7 +9,7 @@ import Foundation
 
 protocol CharacterDetailProviderProtocol : AnyObject {
     func getCharacterById(characterId : String) async throws -> Character
-//    func getEpisodesByIds(episodeId : [Int]) async throws -> Episode
+    func getEpisodesByIds(episodeIds : String) async throws -> [Episode]
 }
 
 
@@ -28,9 +28,18 @@ class CharacterDetailProvider : CharacterDetailProviderProtocol {
         }
 
     }
-//    
-//    func getEpisodesByIds(episodeId: [Int]) async throws -> Episode {
-//        <#code#>
-//    }
+    
+    func getEpisodesByIds(episodeIds: String) async throws -> [Episode] {
+        
+        let request = RequestModel(endpoint: .episode, id: episodeIds)
+        
+        do{
+            let model = try await  ServiceLayer.callService(request, [Episode].self)
+            return model
+        }catch {
+            print(error)
+            throw error
+        }
+    }
     
 }

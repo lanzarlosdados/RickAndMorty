@@ -44,7 +44,8 @@ extension CharacterDetailViewController : CharacterDetailViewProtocol {
         dataObject = list
         dataSectionTitleList = sectionTitleList
         print(list)
-//        tableView.reloadData()
+        print(sectionTitleList)
+        tableView.reloadData()
 
     }
     
@@ -53,25 +54,29 @@ extension CharacterDetailViewController : CharacterDetailViewProtocol {
 extension CharacterDetailViewController : UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        print("section", "\(dataObject.count)")
+        return dataObject.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        print("section", "\(dataObject[section].count)")
+        return dataObject[section].count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let item = dataObject[indexPath.section]
         
-        if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCell(for: CharacterDetailTableViewCell.self, for: indexPath)
-            return cell
+        if let character = item as? [Character] {
+            let characterCell = tableView.dequeueReusableCell(for: CharacterDetailTableViewCell.self, for: indexPath)
+            
+            return characterCell
+            
+        }else if let episode = item as? [Episode] {
+            let episodeCell = tableView.dequeueReusableCell(for: EpisodesDescripcionTableViewCell.self, for: indexPath)
+            episodeCell.configCell(episod: episode[indexPath.row])
+            return episodeCell
         }
-        if indexPath.section == 1 {
-            let cell = tableView.dequeueReusableCell(for: EpisodesDescripcionTableViewCell.self, for: indexPath)
-            return cell
-        }
+        
         return UITableViewCell()
     }
-    
-    
 }

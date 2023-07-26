@@ -51,9 +51,10 @@ class CharacterDetailPresenter{
 //                sectionTitleList.append(responsePlaylist.first?.snippet.title ?? "")
 //            }
 //
-//
-//            dataVideos.append(responseVideos)
-//            sectionTitleList.append("Uplooads")
+            if let episodes = await getEpisodesByIds(episodesIds: "1,2,3,4,5,6") {
+                dataVideos.append(episodes)
+                sectionTitleList.append("Episodes \(episodes.count)")
+            }
             
         }catch{
             print("error",error)
@@ -62,13 +63,13 @@ class CharacterDetailPresenter{
         delegate?.getData(list: dataVideos,sectionTitleList: sectionTitleList)
     }
     
-//    func getPlayListItem(playlistID : String) async -> PlayListItemModel?{
-//        do {
-//            let playlistItems = try await provider.getPlaylistItems(playlistId: playlistID)
-//            return playlistItems
-//        }catch{
-//            print("error",error)
-//            return nil
-//        }
-//    }
+    func getEpisodesByIds(episodesIds: String) async -> [Episode]?{
+        do {
+            let episodes = try await provider.getEpisodesByIds(episodeIds: episodesIds)
+            return episodes
+        }catch{
+            print("error",error)
+            return nil
+        }
+    }
 }
