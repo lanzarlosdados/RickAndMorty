@@ -16,6 +16,7 @@
 		0656FA8B2A6A060D00AA0CB8 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656FA892A6A060D00AA0CB8 /* LocationCell.swift */; };
 		0656FA8C2A6A060D00AA0CB8 /* LocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0656FA8A2A6A060D00AA0CB8 /* LocationCell.xib */; };
 		0657B1812A72B30A000AC576 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0657B1802A72B30A000AC576 /* CardView.swift */; };
+		0657B1832A72D596000AC576 /* SectionTilteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0657B1822A72D596000AC576 /* SectionTilteView.swift */; };
 		065AE9E62A6580D800A0E9CF /* CharactersProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065AE9E52A6580D800A0E9CF /* CharactersProviderProtocol.swift */; };
 		065AE9E82A65875300A0E9CF /* CharactersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065AE9E72A65875300A0E9CF /* CharactersPresenter.swift */; };
 		065AE9EB2A66065D00A0E9CF /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065AE9E92A66065D00A0E9CF /* CharacterDetailViewController.swift */; };
@@ -86,6 +87,7 @@
 		0656FA892A6A060D00AA0CB8 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		0656FA8A2A6A060D00AA0CB8 /* LocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationCell.xib; sourceTree = "<group>"; };
 		0657B1802A72B30A000AC576 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		0657B1822A72D596000AC576 /* SectionTilteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTilteView.swift; sourceTree = "<group>"; };
 		065A0DA52A3E057100FDD060 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		065A0DA72A3E071300FDD060 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		065A0DAA2A3E0A1600FDD060 /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				065AE9EF2A660A4400A0E9CF /* CharacterDetailTableViewCell.xib */,
 				065AE9F22A660A7600A0E9CF /* EpisodesDescripcionTableViewCell.swift */,
 				065AE9F32A660A7600A0E9CF /* EpisodesDescripcionTableViewCell.xib */,
+				0657B1822A72D596000AC576 /* SectionTilteView.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -863,6 +866,7 @@
 				065AE9F42A660A7600A0E9CF /* EpisodesDescripcionTableViewCell.swift in Sources */,
 				0683CF3D2A6F47FE00E18293 /* CharacterDetailPresenter.swift in Sources */,
 				0656FA8B2A6A060D00AA0CB8 /* LocationCell.swift in Sources */,
+				0657B1832A72D596000AC576 /* SectionTilteView.swift in Sources */,
 				0683CF3B2A6F47EE00E18293 /* CharacterDetailProvider.swift in Sources */,
 				067BED862A5F729D00AA1B19 /* ServiceLayer.swift in Sources */,
 				066350422A67639F00F78A83 /* LocationsViewController.swift in Sources */,

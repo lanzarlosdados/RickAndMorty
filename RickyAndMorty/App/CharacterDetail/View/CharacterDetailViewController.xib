@@ -10,6 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CharacterDetailViewController" customModule="RickyAndMorty" customModuleProvider="target">
             <connections>
+                <outlet property="nameCharacter" destination="M4a-6E-vFF" id="wlb-DN-FmR"/>
+                <outlet property="nameStatus" destination="8PM-Wh-5yA" id="Zeb-sS-pwg"/>
+                <outlet property="statusView" destination="TZp-QV-jgO" id="Bcc-SO-bZN"/>
                 <outlet property="tableView" destination="49b-bW-VDI" id="1iX-R0-Wjb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -20,25 +23,61 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="49b-bW-VDI">
-                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <rect key="frame" x="0.0" y="107.66666666666669" width="393" height="710.33333333333326"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8Yv-aP-SZa">
+                    <rect key="frame" x="88" y="69" width="217" height="28.666666666666671"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TZp-QV-jgO">
+                            <rect key="frame" x="0.0" y="8.3333333333333286" width="12" height="12"/>
+                            <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="12" id="USh-cV-4ZG"/>
+                                <constraint firstAttribute="height" constant="12" id="gim-a1-pS2"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="6"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Morty Smith" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4a-6E-vFF">
+                            <rect key="frame" x="17" y="0.0" width="137.66666666666666" height="28.666666666666668"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="( Alive )" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8PM-Wh-5yA">
+                            <rect key="frame" x="159.66666666666666" y="4.3333333333333286" width="57.333333333333343" height="20.333333333333332"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" systemColor="systemGreenColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="49b-bW-VDI" secondAttribute="bottom" id="5St-sL-rg0"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="49b-bW-VDI" secondAttribute="trailing" id="Dxp-sH-mHc"/>
-                <constraint firstItem="49b-bW-VDI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="i3Q-J9-qij"/>
+                <constraint firstItem="8Yv-aP-SZa" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Lhn-ua-fZg"/>
+                <constraint firstItem="49b-bW-VDI" firstAttribute="top" secondItem="8Yv-aP-SZa" secondAttribute="bottom" constant="10" id="YIS-3R-5i5"/>
                 <constraint firstItem="49b-bW-VDI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="oNM-73-vXC"/>
+                <constraint firstItem="8Yv-aP-SZa" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="pWD-8x-qtd"/>
             </constraints>
-            <point key="canvasLocation" x="121" y="20"/>
+            <point key="canvasLocation" x="119.84732824427481" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -10,7 +10,9 @@ import UIKit
 class CharacterDetailViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    
+    @IBOutlet weak var statusView: UIView!
+    @IBOutlet weak var nameCharacter: UILabel!
+    @IBOutlet weak var nameStatus: UILabel!
     
     lazy var presenter = CharacterDetailPresenter(delegate: self)
     private var dataObject : [[Any]] = []
@@ -33,6 +35,8 @@ class CharacterDetailViewController: UIViewController {
                                 CharacterDetailTableViewCell.self,
                                 EpisodesDescripcionTableViewCell.self
                             ])
+        tableView.registerFromClass(headerFooterView: SectionTitleView.self)
+
     }
 
 }
@@ -62,6 +66,9 @@ extension CharacterDetailViewController : UITableViewDelegate, UITableViewDataSo
         
         if let character = item as? [Character] {
             let characterCell = tableView.dequeueReusableCell(for: CharacterDetailTableViewCell.self, for: indexPath)
+            statusView.backgroundColor = character[indexPath.row].status == Status.alive ? UIColor.green : UIColor.red
+            nameCharacter.text = character[indexPath.row].name
+            nameStatus.text = "( \(character[indexPath.row].status.rawValue) )"
             characterCell.configCell(character: character[indexPath.row])
             return characterCell
             
@@ -72,5 +79,14 @@ extension CharacterDetailViewController : UITableViewDelegate, UITableViewDataSo
         }
         
         return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let sectionView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "\(SectionTitleView.self)") as? SectionTitleView else{
+            return nil
+        }
+        sectionView.title.text = dataSectionTitleList[section]
+        sectionView.configView()
+        return sectionView
     }
 }

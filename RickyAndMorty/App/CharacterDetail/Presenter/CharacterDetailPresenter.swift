@@ -53,7 +53,7 @@ class CharacterDetailPresenter{
 //
             if let episodes = await getEpisodesByIds(episodesIds: "1,2,3,4,5,6") {
                 dataVideos.append(episodes)
-                sectionTitleList.append("Episodes \(episodes.count)")
+                sectionTitleList.append("Episodes")
             }
             
         }catch{

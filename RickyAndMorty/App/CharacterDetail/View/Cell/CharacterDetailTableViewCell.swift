@@ -10,28 +10,25 @@ import Kingfisher
 
 class CharacterDetailTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var lastLocation: UILabel!
+    @IBOutlet weak var origin: UILabel!
+    @IBOutlet weak var gender: UILabel!
+    @IBOutlet weak var specie: UILabel!
     @IBOutlet weak var imageCharacter: UIImageView!
-    @IBOutlet weak var statusView: UIView!
-    @IBOutlet weak var characterName: UILabel!
-    @IBOutlet weak var stausName: UILabel!
-    @IBOutlet weak var specieAndGender: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        imageCharacter.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        imageCharacter.layer.cornerRadius = 8
     }
     
     func configCell(character : Character){
-        statusView.backgroundColor = character.status == Status.alive ? UIColor.green : UIColor.red
-        characterName.text = character.name
-        stausName.text = "( \(character.status.rawValue) )"
-        specieAndGender.text = "\(character.species.rawValue) - \(character.gender.rawValue)"
-        
+        lastLocation.text = character.location.name
+        origin.text = character.origin.name
+        gender.text = character.gender.rawValue
+        specie.text = character.species.rawValue
         let url = URL(string: character.image)
-        
         imageCharacter.kf.setImage(with: url)
-        
-        
     }
     
 }
