@@ -7,7 +7,7 @@
 
 import UIKit
 
-@IBDesignable class CardView : UIView {
+class CardView : UIView {
     
     var cornnerRadius : CGFloat = 8
     var shadowOfSetWidth : CGFloat = 0
