@@ -8,7 +8,7 @@
 import Foundation
  
 protocol CharactersViewProtocol : AnyObject {
-    func getData(list : [Result])
+    func getData(list : [Character])
 }
 
 @MainActor
@@ -16,7 +16,7 @@ class CharactersPresenter{
     
     private var provider : CharactersProviderProtocol
     weak var delegate : CharactersViewProtocol?
-    private var data : [Result] = []
+    private var data : [Character] = []
     
     
     init(provider: CharactersProviderProtocol = CharactersProvider() , delegate: CharactersViewProtocol) {

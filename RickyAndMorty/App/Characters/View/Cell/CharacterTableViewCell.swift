@@ -22,7 +22,7 @@ class CharacterTableViewCell: UITableViewCell {
     }
     
 
-    func configCell(character : Result) {
+    func configCell(character : Character) {
         characterName.text = character.name
         characterStatusAndLocation.text = " \(character.status.rawValue) - \(character.species.rawValue) "
         lastKnowLocation.text = character.location.name

@@ -12,7 +12,7 @@ final class CharactersViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     lazy var presenter = CharactersPresenter(delegate: self)
-    private var characters : [Result] = []
+    private var characters : [Character] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,7 @@ final class CharactersViewController: UIViewController {
 }
 
 extension CharactersViewController: CharactersViewProtocol {
-    func getData(list: [Result]) {
+    func getData(list: [Character]) {
         characters = list
         tableView.reloadData()
         print("characters", list)

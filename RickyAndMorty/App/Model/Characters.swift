@@ -9,7 +9,7 @@ import Foundation
 // MARK: - Welcome
 struct Characters : Codable {
     let info: Info
-    let results: [Result]
+    let results: [Character]
 }
 
 // MARK: - Info

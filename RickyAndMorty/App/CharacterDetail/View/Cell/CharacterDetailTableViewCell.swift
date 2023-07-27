@@ -21,7 +21,7 @@ class CharacterDetailTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    func configCell(character : Result){
+    func configCell(character : Character){
         statusView.backgroundColor = character.status == Status.alive ? UIColor.green : UIColor.red
         characterName.text = character.name
         stausName.text = "( \(character.status.rawValue) )"

@@ -40,13 +40,9 @@ class CharacterDetailViewController: UIViewController {
 extension CharacterDetailViewController : CharacterDetailViewProtocol {
     
     func getData(list: [[Any]], sectionTitleList: [String]) {
-        
         dataObject = list
         dataSectionTitleList = sectionTitleList
-        print(list)
-        print(sectionTitleList)
         tableView.reloadData()
-
     }
     
 }
@@ -54,12 +50,10 @@ extension CharacterDetailViewController : CharacterDetailViewProtocol {
 extension CharacterDetailViewController : UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        print("section", "\(dataObject.count)")
         return dataObject.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("section", "\(dataObject[section].count)")
         return dataObject[section].count
     }
     
@@ -68,7 +62,7 @@ extension CharacterDetailViewController : UITableViewDelegate, UITableViewDataSo
         
         if let character = item as? [Character] {
             let characterCell = tableView.dequeueReusableCell(for: CharacterDetailTableViewCell.self, for: indexPath)
-            
+            characterCell.configCell(character: character[indexPath.row])
             return characterCell
             
         }else if let episode = item as? [Episode] {
