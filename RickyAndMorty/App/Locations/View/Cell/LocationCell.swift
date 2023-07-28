@@ -9,9 +9,10 @@ import UIKit
 
 class LocationCell: UITableViewCell {
 
-    @IBOutlet weak private var name: UILabel!
-    @IBOutlet weak private var type: UILabel!
-    @IBOutlet weak private var dimension: UILabel!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var type: UILabel!
+    @IBOutlet weak var dimension: UILabel!
+    @IBOutlet weak var residents: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,6 +23,7 @@ class LocationCell: UITableViewCell {
         name.text = location.name
         type.text = location.type
         dimension.text = location.dimension
+        residents.text = "\(location.residents?.count ?? 0)"
     }
  
 }
