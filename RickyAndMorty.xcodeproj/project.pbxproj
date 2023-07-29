@@ -14,6 +14,8 @@
 		0656FA8B2A6A060D00AA0CB8 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656FA892A6A060D00AA0CB8 /* LocationCell.swift */; };
 		0656FA8C2A6A060D00AA0CB8 /* LocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0656FA8A2A6A060D00AA0CB8 /* LocationCell.xib */; };
 		065725042A7549EE004B2F1F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065725032A7549EE004B2F1F /* BaseViewController.swift */; };
+		065725082A755CDE004B2F1F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065725062A755CDE004B2F1F /* LoginViewController.swift */; };
+		065725092A755CDE004B2F1F /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 065725072A755CDE004B2F1F /* LoginViewController.xib */; };
 		0657B1812A72B30A000AC576 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0657B1802A72B30A000AC576 /* CardView.swift */; };
 		0657B1832A72D596000AC576 /* SectionTilteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0657B1822A72D596000AC576 /* SectionTilteView.swift */; };
 		0657B1872A72ED48000AC576 /* CharactersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0657B1852A72ED48000AC576 /* CharactersCollectionViewCell.swift */; };
@@ -86,6 +88,8 @@
 		0656FA892A6A060D00AA0CB8 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		0656FA8A2A6A060D00AA0CB8 /* LocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationCell.xib; sourceTree = "<group>"; };
 		065725032A7549EE004B2F1F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		065725062A755CDE004B2F1F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		065725072A755CDE004B2F1F /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		0657B1802A72B30A000AC576 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		0657B1822A72D596000AC576 /* SectionTilteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTilteView.swift; sourceTree = "<group>"; };
 		0657B1852A72ED48000AC576 /* CharactersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -402,7 +406,7 @@
 			children = (
 				0656FA842A69F35700AA0CB8 /* TabBar */,
 				06B9C7E62A3A9060009C6FFD /* LaunchScreen */,
-				06B9C7E52A3A8F50009C6FFD /* LocationDetail */,
+				06B9C7E52A3A8F50009C6FFD /* Login */,
 				06B9C7E32A3A8EE0009C6FFD /* Locations */,
 				06B9C7E12A3A8EC4009C6FFD /* Episodes */,
 				06B9C7E02A3A8EBA009C6FFD /* Characters */,
@@ -581,11 +585,13 @@
 			path = Locations;
 			sourceTree = "<group>";
 		};
-		06B9C7E52A3A8F50009C6FFD /* LocationDetail */ = {
+		06B9C7E52A3A8F50009C6FFD /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				065725062A755CDE004B2F1F /* LoginViewController.swift */,
+				065725072A755CDE004B2F1F /* LoginViewController.xib */,
 			);
-			path = LocationDetail;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		06B9C7E62A3A9060009C6FFD /* LaunchScreen */ = {
@@ -735,6 +741,7 @@
 				06B9C7A02A3A8871009C6FFD /* Assets.xcassets in Resources */,
 				065AE9F52A660A7600A0E9CF /* EpisodesDescripcionTableViewCell.xib in Resources */,
 				065AE9F12A660A4400A0E9CF /* CharacterDetailTableViewCell.xib in Resources */,
+				065725092A755CDE004B2F1F /* LoginViewController.xib in Resources */,
 				0657B1882A72ED48000AC576 /* CharactersCollectionViewCell.xib in Resources */,
 				0663503F2A67638F00F78A83 /* EpisodesViewController.xib in Resources */,
 				067BED952A5F7D4100AA1B19 /* File.json in Resources */,
@@ -889,6 +896,7 @@
 				065AE9E62A6580D800A0E9CF /* CharactersProviderProtocol.swift in Sources */,
 				0683CF292A6D727200E18293 /* LocationProvider.swift in Sources */,
 				0683CF262A6D723D00E18293 /* LocationsPresenter.swift in Sources */,
+				065725082A755CDE004B2F1F /* LoginViewController.swift in Sources */,
 				065AE9E82A65875300A0E9CF /* CharactersPresenter.swift in Sources */,
 				067BED8C2A5F729D00AA1B19 /* HomeFactory.swift in Sources */,
 				067BED8D2A5F729D00AA1B19 /* HomeCoordinator.swift in Sources */,

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="RickyAndMorty" customModuleProvider="target">
+            <connections>
+                <outlet property="login" destination="Lqh-aW-zcz" id="an3-j2-zMt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rick-And-Morty-Logo-700x394" translatesAutoresizingMaskIntoConstraints="NO" id="fnv-pZ-WdR">
+                    <rect key="frame" x="96.666666666666686" y="79" width="200" height="100"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="C57-DJ-gKW"/>
+                        <constraint firstAttribute="height" constant="100" id="yfJ-WG-mem"/>
+                    </constraints>
+                </imageView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J5v-oN-Qru">
+                    <rect key="frame" x="20" y="209" width="353" height="609"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pwj-V2-vKC">
+                            <rect key="frame" x="0.0" y="0.0" width="353" height="152"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SQi-sr-J9e">
+                                    <rect key="frame" x="0.0" y="0.0" width="353" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="hEj-P1-Tf0"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SgL-C1-nhW">
+                                    <rect key="frame" x="0.0" y="54" width="353" height="44"/>
+                                    <color key="tintColor" systemColor="labelColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="LuI-Xe-PKr"/>
+                                    </constraints>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lqh-aW-zcz">
+                                    <rect key="frame" x="0.0" y="108" width="353" height="44"/>
+                                    <color key="backgroundColor" red="0.16862745098039217" green="0.76078431372549016" blue="0.054901960784313725" alpha="0.58878082482993199" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="W43-ED-IeB"/>
+                                    </constraints>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="LOGIN">
+                                        <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="loginAction:" destination="-1" eventType="touchUpInside" id="9Lm-gD-U64"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="pwj-V2-vKC" firstAttribute="top" secondItem="J5v-oN-Qru" secondAttribute="top" id="1vs-Kt-REc"/>
+                        <constraint firstItem="pwj-V2-vKC" firstAttribute="height" secondItem="J5v-oN-Qru" secondAttribute="height" priority="250" id="8Px-GD-N5k"/>
+                        <constraint firstAttribute="bottom" secondItem="pwj-V2-vKC" secondAttribute="bottom" id="9Us-xH-6L1"/>
+                        <constraint firstAttribute="trailing" secondItem="pwj-V2-vKC" secondAttribute="trailing" id="GVc-Ei-teI"/>
+                        <constraint firstItem="pwj-V2-vKC" firstAttribute="leading" secondItem="J5v-oN-Qru" secondAttribute="leading" id="LTl-1I-Shg"/>
+                        <constraint firstItem="pwj-V2-vKC" firstAttribute="width" secondItem="J5v-oN-Qru" secondAttribute="width" id="kjz-hC-f1j"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="J5v-oN-Qru" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="8Uq-0B-cPF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="J5v-oN-Qru" secondAttribute="trailing" constant="20" id="RYr-Jw-WIj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="J5v-oN-Qru" secondAttribute="bottom" id="TId-iv-RVd"/>
+                <constraint firstItem="fnv-pZ-WdR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="TrT-Hx-JVV"/>
+                <constraint firstItem="J5v-oN-Qru" firstAttribute="top" secondItem="fnv-pZ-WdR" secondAttribute="bottom" constant="30" id="Yza-U2-KaZ"/>
+                <constraint firstItem="fnv-pZ-WdR" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="oy4-Ow-jMe"/>
+            </constraints>
+            <point key="canvasLocation" x="48" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Rick-And-Morty-Logo-700x394" width="700" height="394"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
