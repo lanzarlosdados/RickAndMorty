@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class CharactersViewController: UIViewController {
+final class CharactersViewController: BaseViewController {
    
     @IBOutlet weak var collectionView: UICollectionView!
     

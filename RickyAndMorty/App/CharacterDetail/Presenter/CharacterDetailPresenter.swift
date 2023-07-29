@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol CharacterDetailViewProtocol : AnyObject{
+protocol CharacterDetailViewProtocol : AnyObject, BaseViewProtocol{
     func getData(list : [[Any]],sectionTitleList : [String])
 }
 @MainActor
@@ -33,15 +33,15 @@ class CharacterDetailPresenter{
         dataVideos.removeAll()
         sectionTitleList.removeAll()
         
-//        delegate?.loadingView(.show)
+        delegate?.loadingView(.show)
         
         async let character = try await provider.getCharacterById(characterId: id)
         
         do {
             
-//            defer{
-//                delegate?.loadingView(.hide)
-//            }
+            defer{
+                delegate?.loadingView(.hide)
+            }
             let (response) = await (try character)
             dataVideos.append([response])
             sectionTitleList.append("")

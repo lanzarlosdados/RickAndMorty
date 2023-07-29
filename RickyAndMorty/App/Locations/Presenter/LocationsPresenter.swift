@@ -5,7 +5,7 @@
 //  Created by fabian zarate on 23/07/2023.
 //
 
-protocol LocationsViewProtocol : AnyObject {
+protocol LocationsViewProtocol : AnyObject, BaseViewProtocol {
     func getData(list : [Location])
 }
 
@@ -28,10 +28,13 @@ class LocationsPresenter{
     }
     
     func getLocations() async{
-        
+        delegate?.loadingView(.show)
         async let locations = try await provider.getLocations().results
         
         do {
+            defer{
+                delegate?.loadingView(.hide)
+            }
             let (response) = await (try locations)
             data = response
         }catch{

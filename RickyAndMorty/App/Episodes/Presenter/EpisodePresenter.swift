@@ -8,7 +8,7 @@
 
 import Foundation
  
-protocol EpisodesViewProtocol : AnyObject {
+protocol EpisodesViewProtocol : AnyObject, BaseViewProtocol {
     func getData(list : [Episode])
 }
 
@@ -31,10 +31,13 @@ class EpisodesPresenter{
     }
     
     func getEpisodes() async{
-        
+        delegate?.loadingView(.show)
         async let episodes = try await provider.getEpisodes().results
         
         do {
+            defer{
+                delegate?.loadingView(.hide)
+            }
             let (response) = await (try episodes)
             data = response
         }catch{

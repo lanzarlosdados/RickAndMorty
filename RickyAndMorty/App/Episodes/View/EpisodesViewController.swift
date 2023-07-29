@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class EpisodesViewController: UIViewController {
+final class EpisodesViewController: BaseViewController {
 
     @IBOutlet weak var tableView: UITableView!
     

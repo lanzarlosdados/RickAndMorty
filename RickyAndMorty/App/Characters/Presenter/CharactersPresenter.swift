@@ -7,7 +7,7 @@
 
 import Foundation
  
-protocol CharactersViewProtocol : AnyObject {
+protocol CharactersViewProtocol : AnyObject, BaseViewProtocol {
     func getData(list : [Character])
 }
 
@@ -31,9 +31,12 @@ class CharactersPresenter{
     
     func getCharacters() async{
         
+        delegate?.loadingView(.show)
         async let characters = try await provider.getAllCharacters().results
-        
         do {
+            defer{
+                delegate?.loadingView(.hide)
+            }
             let (response) = await (try characters)
             data = response
         }catch{

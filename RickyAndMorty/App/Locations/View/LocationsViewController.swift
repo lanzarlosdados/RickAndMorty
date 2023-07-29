@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class LocationsViewController: UIViewController {
+final class LocationsViewController: BaseViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
