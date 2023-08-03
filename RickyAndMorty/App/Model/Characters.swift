@@ -19,20 +19,6 @@ struct Info: Codable {
     let prev: String?
 }
 
-// MARK: - Result
-struct Result: Codable {
-    let id: Int
-    let name: String
-    let status: Status
-    let species: Species
-    let type: String
-    let gender: Gender
-    let origin, location: Location
-    let image: String
-    let episode: [String]
-    let url: String
-    let created: String
-}
 
 struct Character: Codable {
     let id: Int

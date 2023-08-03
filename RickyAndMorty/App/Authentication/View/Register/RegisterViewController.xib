@@ -10,6 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="RickyAndMorty" customModuleProvider="target">
             <connections>
+                <outlet property="email" destination="bqD-0I-j4r" id="cWa-wJ-XdS"/>
+                <outlet property="password" destination="ZgT-3w-UtV" id="LZ2-ZA-gyZ"/>
+                <outlet property="registerButtom" destination="XXz-Jr-26u" id="Cz0-IJ-RSW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -76,6 +79,9 @@
                                             <integer key="value" value="8"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="registerAction:" destination="-1" eventType="touchUpInside" id="EYJ-4L-VE7"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>

@@ -34,6 +34,10 @@
 		06604E1A2A7BE43700A500CC /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 06604E192A7BE43700A500CC /* FirebaseAuth */; };
 		06604E1F2A7BEEBD00A500CC /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06604E1D2A7BEEBD00A500CC /* RegisterViewController.swift */; };
 		06604E202A7BEEBD00A500CC /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06604E1E2A7BEEBD00A500CC /* RegisterViewController.xib */; };
+		06604E232A7C164400A500CC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06604E222A7C164400A500CC /* User.swift */; };
+		06604E2C2A7C23D200A500CC /* AuthenticationFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06604E2B2A7C23D200A500CC /* AuthenticationFirebase.swift */; };
+		06604E2E2A7C256C00A500CC /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06604E2D2A7C256C00A500CC /* AuthenticationRepository.swift */; };
+		06604E302A7C265900A500CC /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06604E2F2A7C265900A500CC /* AuthenticationViewModel.swift */; };
 		0663503E2A67638F00F78A83 /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0663503C2A67638F00F78A83 /* EpisodesViewController.swift */; };
 		0663503F2A67638F00F78A83 /* EpisodesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0663503D2A67638F00F78A83 /* EpisodesViewController.xib */; };
 		066350422A67639F00F78A83 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066350402A67639F00F78A83 /* LocationsViewController.swift */; };
@@ -114,6 +118,10 @@
 		065AE9F32A660A7600A0E9CF /* EpisodesDescripcionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodesDescripcionTableViewCell.xib; sourceTree = "<group>"; };
 		06604E1D2A7BEEBD00A500CC /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		06604E1E2A7BEEBD00A500CC /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		06604E222A7C164400A500CC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		06604E2B2A7C23D200A500CC /* AuthenticationFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFirebase.swift; sourceTree = "<group>"; };
+		06604E2D2A7C256C00A500CC /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
+		06604E2F2A7C265900A500CC /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		0663503C2A67638F00F78A83 /* EpisodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewController.swift; sourceTree = "<group>"; };
 		0663503D2A67638F00F78A83 /* EpisodesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodesViewController.xib; sourceTree = "<group>"; };
 		066350402A67639F00F78A83 /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
@@ -249,7 +257,8 @@
 		06604E1B2A7BEE9D00A500CC /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				06604E212A7C13CF00A500CC /* View */,
+				06604E1D2A7BEEBD00A500CC /* RegisterViewController.swift */,
+				06604E1E2A7BEEBD00A500CC /* RegisterViewController.xib */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -257,10 +266,44 @@
 		06604E212A7C13CF00A500CC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				06604E1D2A7BEEBD00A500CC /* RegisterViewController.swift */,
-				06604E1E2A7BEEBD00A500CC /* RegisterViewController.xib */,
+				06B9C7E52A3A8F50009C6FFD /* Login */,
+				06604E1B2A7BEE9D00A500CC /* Register */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		06604E252A7C19FD00A500CC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				06604E262A7C1A0F00A500CC /* Repository */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		06604E262A7C1A0F00A500CC /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				06604E2D2A7C256C00A500CC /* AuthenticationRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		06604E292A7C1AD500A500CC /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				06604E252A7C19FD00A500CC /* Model */,
+				06604E2A2A7C1B4500A500CC /* ViewModel */,
+				06604E212A7C13CF00A500CC /* View */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		06604E2A2A7C1B4500A500CC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				06604E2F2A7C265900A500CC /* AuthenticationViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		067BED4C2A5DE00F00AA1B19 /* Model */ = {
@@ -269,6 +312,7 @@
 				0654BABD2A62E7C000DA348B /* Characters.swift */,
 				0683CF2A2A6D772200E18293 /* Locations.swift */,
 				0683CF2C2A6D9B6000E18293 /* Episodes.swift */,
+				06604E222A7C164400A500CC /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -424,10 +468,9 @@
 		06B9C7C62A3A8B7C009C6FFD /* App */ = {
 			isa = PBXGroup;
 			children = (
+				06604E292A7C1AD500A500CC /* Authentication */,
 				0656FA842A69F35700AA0CB8 /* TabBar */,
 				06B9C7E62A3A9060009C6FFD /* LaunchScreen */,
-				06604E1B2A7BEE9D00A500CC /* Register */,
-				06B9C7E52A3A8F50009C6FFD /* Login */,
 				06B9C7E32A3A8EE0009C6FFD /* Locations */,
 				06B9C7E12A3A8EC4009C6FFD /* Episodes */,
 				06B9C7E02A3A8EBA009C6FFD /* Characters */,
@@ -469,6 +512,7 @@
 				067BED502A5EEB4F00AA1B19 /* ServiceLayer.swift */,
 				067BED532A5EEBF700AA1B19 /* NetworkError.swift */,
 				067BED562A5EED4600AA1B19 /* RequestModel.swift */,
+				06604E2B2A7C23D200A500CC /* AuthenticationFirebase.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -850,16 +894,20 @@
 				0656FA862A69F38400AA0CB8 /* TabBar.swift in Sources */,
 				067BED892A5F729D00AA1B19 /* SceneDelegate.swift in Sources */,
 				0657B1872A72ED48000AC576 /* CharactersCollectionViewCell.swift in Sources */,
+				06604E2C2A7C23D200A500CC /* AuthenticationFirebase.swift in Sources */,
 				067BED8A2A5F729D00AA1B19 /* AppDelegate.swift in Sources */,
 				065AE9EB2A66065D00A0E9CF /* CharacterDetailViewController.swift in Sources */,
 				065AE9F02A660A4400A0E9CF /* CharacterDetailTableViewCell.swift in Sources */,
 				067BED8B2A5F729D00AA1B19 /* AppFactory.swift in Sources */,
 				065AE9E62A6580D800A0E9CF /* CharactersProviderProtocol.swift in Sources */,
+				06604E2E2A7C256C00A500CC /* AuthenticationRepository.swift in Sources */,
 				0683CF292A6D727200E18293 /* LocationProvider.swift in Sources */,
 				06604E1F2A7BEEBD00A500CC /* RegisterViewController.swift in Sources */,
 				0683CF262A6D723D00E18293 /* LocationsPresenter.swift in Sources */,
 				065725082A755CDE004B2F1F /* LoginViewController.swift in Sources */,
+				06604E232A7C164400A500CC /* User.swift in Sources */,
 				065AE9E82A65875300A0E9CF /* CharactersPresenter.swift in Sources */,
+				06604E302A7C265900A500CC /* AuthenticationViewModel.swift in Sources */,
 				067BED8C2A5F729D00AA1B19 /* HomeFactory.swift in Sources */,
 				067BED8D2A5F729D00AA1B19 /* HomeCoordinator.swift in Sources */,
 				0683CF332A6D9C7100E18293 /* EpisodeProvider.swift in Sources */,
