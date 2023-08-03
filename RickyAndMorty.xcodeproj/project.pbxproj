@@ -249,10 +249,18 @@
 		06604E1B2A7BEE9D00A500CC /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				06604E212A7C13CF00A500CC /* View */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		06604E212A7C13CF00A500CC /* View */ = {
+			isa = PBXGroup;
+			children = (
 				06604E1D2A7BEEBD00A500CC /* RegisterViewController.swift */,
 				06604E1E2A7BEEBD00A500CC /* RegisterViewController.xib */,
 			);
-			path = Register;
+			path = View;
 			sourceTree = "<group>";
 		};
 		067BED4C2A5DE00F00AA1B19 /* Model */ = {

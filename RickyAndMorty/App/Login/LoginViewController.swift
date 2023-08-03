@@ -9,6 +9,7 @@ import UIKit
 
 class LoginViewController: BaseViewController {
 
+    @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var login: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,11 @@ class LoginViewController: BaseViewController {
     @IBAction func loginAction(_ sender: Any) {
         let vc = TabBar()
         show(vc, sender: nil)
+    }
+    
+    @IBAction func registerAction(_ sender: Any) {
+        let vc = RegisterViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 }

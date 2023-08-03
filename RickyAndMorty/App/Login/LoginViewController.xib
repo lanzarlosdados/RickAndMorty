@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="RickyAndMorty" customModuleProvider="target">
             <connections>
                 <outlet property="login" destination="Lqh-aW-zcz" id="an3-j2-zMt"/>
+                <outlet property="registerButton" destination="UiP-nO-oFr" id="iVs-X8-lDV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -108,7 +109,7 @@
                                     </constraints>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="continue whit Google">
+                                    <buttonConfiguration key="configuration" style="plain" title="Continue whit Google">
                                         <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                     </buttonConfiguration>
                                     <userDefinedRuntimeAttributes>
@@ -125,7 +126,7 @@
                                     </constraints>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="continue whit Facebook">
+                                    <buttonConfiguration key="configuration" style="plain" title="Continue whit Facebook">
                                         <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                     </buttonConfiguration>
                                     <userDefinedRuntimeAttributes>
@@ -142,7 +143,7 @@
                                     </constraints>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="continue whit Apple">
+                                    <buttonConfiguration key="configuration" style="plain" title="Continue whit Apple">
                                         <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                     </buttonConfiguration>
                                     <userDefinedRuntimeAttributes>
@@ -167,6 +168,9 @@
                                             <buttonConfiguration key="configuration" style="plain" title="Register here!">
                                                 <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                             </buttonConfiguration>
+                                            <connections>
+                                                <action selector="registerAction:" destination="-1" eventType="touchUpInside" id="K56-c0-imA"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>
