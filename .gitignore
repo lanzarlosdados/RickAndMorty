@@ -1,6 +1,11 @@
-## Gcc Patch
-/*.gcno
-### Xcode Patch ### *.xcodeproj/* _!*.xcodeproj/project.pbxproj !*.xcodeproj/xcshareddata/
-!*.xcworkspace/contents.xcworkspacedata
-**/xcshareddata/WorkspaceSettings.xcsettings
-# End of https://www.toptal.com/developers/gitignore/api/swift,cocoapods,xcode
+# generado por xcode
+build/*
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.swp
+*~.nib
+*.perspective
+*.perspectivev3 # generado por osx
+.DS_Storeprofile
+.GoogleService-Info.plist
