@@ -16,7 +16,6 @@
 		065725042A7549EE004B2F1F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065725032A7549EE004B2F1F /* BaseViewController.swift */; };
 		065725082A755CDE004B2F1F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065725062A755CDE004B2F1F /* LoginViewController.swift */; };
 		065725092A755CDE004B2F1F /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 065725072A755CDE004B2F1F /* LoginViewController.xib */; };
-		06573D532A79E639003B4466 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06573D522A79E639003B4466 /* GoogleService-Info.plist */; };
 		06573D562A79ECB1003B4466 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 06573D552A79ECB1003B4466 /* FirebaseAnalytics */; };
 		06573D582A79ECB1003B4466 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 06573D572A79ECB1003B4466 /* FirebaseAnalyticsSwift */; };
 		0657B1812A72B30A000AC576 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0657B1802A72B30A000AC576 /* CardView.swift */; };
@@ -38,6 +37,7 @@
 		06604E2C2A7C23D200A500CC /* AuthenticationFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06604E2B2A7C23D200A500CC /* AuthenticationFirebase.swift */; };
 		06604E2E2A7C256C00A500CC /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06604E2D2A7C256C00A500CC /* AuthenticationRepository.swift */; };
 		06604E302A7C265900A500CC /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06604E2F2A7C265900A500CC /* AuthenticationViewModel.swift */; };
+		06604E312A7C3A3C00A500CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06604E332A7C3A3C00A500CC /* GoogleService-Info.plist */; };
 		0663503E2A67638F00F78A83 /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0663503C2A67638F00F78A83 /* EpisodesViewController.swift */; };
 		0663503F2A67638F00F78A83 /* EpisodesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0663503D2A67638F00F78A83 /* EpisodesViewController.xib */; };
 		066350422A67639F00F78A83 /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066350402A67639F00F78A83 /* LocationsViewController.swift */; };
@@ -98,7 +98,6 @@
 		065725032A7549EE004B2F1F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		065725062A755CDE004B2F1F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		065725072A755CDE004B2F1F /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		06573D522A79E639003B4466 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0657B1802A72B30A000AC576 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		0657B1822A72D596000AC576 /* SectionTilteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTilteView.swift; sourceTree = "<group>"; };
 		0657B1852A72ED48000AC576 /* CharactersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -122,6 +121,7 @@
 		06604E2B2A7C23D200A500CC /* AuthenticationFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFirebase.swift; sourceTree = "<group>"; };
 		06604E2D2A7C256C00A500CC /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
 		06604E2F2A7C265900A500CC /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		06604E322A7C3A3C00A500CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = "Base.lproj/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0663503C2A67638F00F78A83 /* EpisodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewController.swift; sourceTree = "<group>"; };
 		0663503D2A67638F00F78A83 /* EpisodesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodesViewController.xib; sourceTree = "<group>"; };
 		066350402A67639F00F78A83 /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
@@ -452,7 +452,7 @@
 			children = (
 				06B9C7C62A3A8B7C009C6FFD /* App */,
 				06B9C7A42A3A8871009C6FFD /* Info.plist */,
-				06573D522A79E639003B4466 /* GoogleService-Info.plist */,
+				06604E332A7C3A3C00A500CC /* GoogleService-Info.plist */,
 			);
 			path = RickyAndMorty;
 			sourceTree = "<group>";
@@ -797,7 +797,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06573D532A79E639003B4466 /* GoogleService-Info.plist in Resources */,
+				06604E312A7C3A3C00A500CC /* GoogleService-Info.plist in Resources */,
 				0654BAC22A62EF8E00DA348B /* CharactersViewController.xib in Resources */,
 				06B9C7A32A3A8871009C6FFD /* LaunchScreen.storyboard in Resources */,
 				0656FA8C2A6A060D00AA0CB8 /* LocationCell.xib in Resources */,
@@ -945,6 +945,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		06604E332A7C3A3C00A500CC /* GoogleService-Info.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06604E322A7C3A3C00A500CC /* Base */,
+			);
+			name = "GoogleService-Info.plist";
+			path = ../../../Downloads;
+			sourceTree = "<group>";
+		};
 		06B9C7A12A3A8871009C6FFD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
