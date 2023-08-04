@@ -8,7 +8,6 @@
 import Foundation
 protocol UserViewProtocol : AnyObject, BaseViewProtocol {
     func getUser(user : User)
-    func getErrorMessage(error: String)
 }
 
 final class AuthenticationViewModel {
@@ -33,7 +32,7 @@ final class AuthenticationViewModel {
             case .success(let user):
                 self?.delegate?.getUser(user: user)
             case .failure(let error):
-                self?.delegate?.getErrorMessage(error: error.localizedDescription)
+                self?.delegate?.showError(error.localizedDescription, callback: nil)
             }
         }
         
