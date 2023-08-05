@@ -67,6 +67,7 @@ extension CharacterDetailViewController : UITableViewDelegate, UITableViewDataSo
         if let character = item as? [Character] {
             let characterCell = tableView.dequeueReusableCell(for: CharacterDetailTableViewCell.self, for: indexPath)
             statusView.backgroundColor = character[indexPath.row].status == Status.alive ? UIColor.green : UIColor.red
+            nameStatus.textColor = character[indexPath.row].status == Status.alive ? UIColor.green : UIColor.red
             nameCharacter.text = character[indexPath.row].name
             nameStatus.text = "( \(character[indexPath.row].status.rawValue) )"
             characterCell.configCell(character: character[indexPath.row])

@@ -20,6 +20,7 @@ final class AuthenticationViewModel {
         self.delegate = delegate
     }
     
+    
     func createNewUser(email: String, password: String){
         delegate?.loadingView(.show)
         
@@ -35,7 +36,39 @@ final class AuthenticationViewModel {
                 self?.delegate?.showError(error.localizedDescription, callback: nil)
             }
         }
+    }
+    
+    func login(email: String, password: String){
+        delegate?.loadingView(.show)
         
+        defer{
+            delegate?.loadingView(.hide)
+        }
+        
+        authRepository.login(email: email, password: password) { [weak self] result in
+            switch result {
+            case .success(let user):
+                self?.delegate?.getUser(user: user)
+            case .failure(let error):
+                self?.delegate?.showError(error.localizedDescription, callback: nil)
+            }
+        }
+    }
+    
+    func getCurrentUser() {
+        if let user = authRepository.getCurrentUser() {
+            self.delegate?.getUser(user: user)
+        }
+    }
+    
+    func logout() {
+        do {
+           try authRepository.logOut()
+            print("user logout")
+        }catch {
+            print("error logout")
+        }
+       
     }
 }
 

@@ -10,7 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="RickyAndMorty" customModuleProvider="target">
             <connections>
+                <outlet property="email" destination="SQi-sr-J9e" id="iqL-Vt-HEu"/>
                 <outlet property="login" destination="Lqh-aW-zcz" id="an3-j2-zMt"/>
+                <outlet property="password" destination="SgL-C1-nhW" id="V53-cr-nyi"/>
                 <outlet property="registerButton" destination="UiP-nO-oFr" id="iVs-X8-lDV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
