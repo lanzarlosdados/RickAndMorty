@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0626EE992A81307F0002F6B6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0626EE972A81307F0002F6B6 /* ProfileViewController.swift */; };
+		0626EE9A2A81307F0002F6B6 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0626EE982A81307F0002F6B6 /* ProfileViewController.xib */; };
 		0654BABE2A62E7C000DA348B /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654BABD2A62E7C000DA348B /* Characters.swift */; };
 		0654BAC12A62EF8E00DA348B /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654BABF2A62EF8E00DA348B /* CharactersViewController.swift */; };
 		0654BAC22A62EF8E00DA348B /* CharactersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0654BAC02A62EF8E00DA348B /* CharactersViewController.xib */; };
@@ -88,6 +90,8 @@
 
 /* Begin PBXFileReference section */
 		00EF6FD9F5B2DF4B52CF7BC4 /* Pods-RickyAndMorty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickyAndMorty.release.xcconfig"; path = "Target Support Files/Pods-RickyAndMorty/Pods-RickyAndMorty.release.xcconfig"; sourceTree = "<group>"; };
+		0626EE972A81307F0002F6B6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		0626EE982A81307F0002F6B6 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		063F948F2A426C7600F6EF4D /* DequeuableRegistrableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DequeuableRegistrableCell.swift; sourceTree = "<group>"; };
 		0654BABD2A62E7C000DA348B /* Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
 		0654BABF2A62EF8E00DA348B /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +186,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0626EE962A8130630002F6B6 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				0626EE972A81307F0002F6B6 /* ProfileViewController.swift */,
+				0626EE982A81307F0002F6B6 /* ProfileViewController.xib */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		0654BAC32A62EFB400DA348B /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -468,6 +481,7 @@
 		06B9C7C62A3A8B7C009C6FFD /* App */ = {
 			isa = PBXGroup;
 			children = (
+				0626EE962A8130630002F6B6 /* Profile */,
 				06604E292A7C1AD500A500CC /* Authentication */,
 				0656FA842A69F35700AA0CB8 /* TabBar */,
 				06B9C7E62A3A9060009C6FFD /* LaunchScreen */,
@@ -800,6 +814,7 @@
 				06604E312A7C3A3C00A500CC /* GoogleService-Info.plist in Resources */,
 				0654BAC22A62EF8E00DA348B /* CharactersViewController.xib in Resources */,
 				06B9C7A32A3A8871009C6FFD /* LaunchScreen.storyboard in Resources */,
+				0626EE9A2A81307F0002F6B6 /* ProfileViewController.xib in Resources */,
 				0656FA8C2A6A060D00AA0CB8 /* LocationCell.xib in Resources */,
 				066350432A67639F00F78A83 /* LocationsViewController.xib in Resources */,
 				065AE9EC2A66065D00A0E9CF /* CharacterDetailViewController.xib in Resources */,
@@ -917,6 +932,7 @@
 				067BED902A5F729D00AA1B19 /* Utils.swift in Sources */,
 				067BED912A5F729D00AA1B19 /* DequeuableRegistrableCell.swift in Sources */,
 				0683CF352A6D9C8100E18293 /* EpisodePresenter.swift in Sources */,
+				0626EE992A81307F0002F6B6 /* ProfileViewController.swift in Sources */,
 				0657B1812A72B30A000AC576 /* CardView.swift in Sources */,
 				067BED922A5F729D00AA1B19 /* Constants.swift in Sources */,
 			);

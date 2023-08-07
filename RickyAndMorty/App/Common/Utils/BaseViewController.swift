@@ -24,7 +24,6 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.backButtonTitle = ""
         navigationController?.navigationBar.tintColor = UIColor.black
-
     }
     
 }

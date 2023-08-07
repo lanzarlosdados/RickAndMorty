@@ -22,7 +22,8 @@ class TabBar: UITabBarController {
             viewControllers = [
                 createNavController(for: CharactersViewController(), title: NSLocalizedString("Characters", comment: ""), image: UIImage(systemName: "person.3")!),
                 createNavController(for: LocationsViewController(), title: NSLocalizedString("Locations", comment: ""), image: UIImage(systemName: "location")!),
-                createNavController(for: EpisodesViewController(), title: NSLocalizedString("Episodes", comment: ""), image: UIImage(systemName: "play.rectangle")!)
+                createNavController(for: EpisodesViewController(), title: NSLocalizedString("Episodes", comment: ""), image: UIImage(systemName: "play.rectangle")!),
+                createNavController(for: ProfileViewController(), title: NSLocalizedString("Profile", comment: ""), image: UIImage(systemName: "person")!)
             ]
         }
     
