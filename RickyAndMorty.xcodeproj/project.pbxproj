@@ -11,6 +11,7 @@
 		0626EE9A2A81307F0002F6B6 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0626EE982A81307F0002F6B6 /* ProfileViewController.xib */; };
 		0626EE9C2A81BB2C0002F6B6 /* String+ValidityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0626EE9B2A81BB2C0002F6B6 /* String+ValidityType.swift */; };
 		0626EE9E2A81BF710002F6B6 /* ValidateForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0626EE9D2A81BF710002F6B6 /* ValidateForm.swift */; };
+		06501D232A82D92A00CC16C1 /* UITextField+PasswordToogle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06501D222A82D92A00CC16C1 /* UITextField+PasswordToogle.swift */; };
 		0654BABE2A62E7C000DA348B /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654BABD2A62E7C000DA348B /* Characters.swift */; };
 		0654BAC12A62EF8E00DA348B /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654BABF2A62EF8E00DA348B /* CharactersViewController.swift */; };
 		0654BAC22A62EF8E00DA348B /* CharactersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0654BAC02A62EF8E00DA348B /* CharactersViewController.xib */; };
@@ -97,6 +98,7 @@
 		0626EE9B2A81BB2C0002F6B6 /* String+ValidityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ValidityType.swift"; sourceTree = "<group>"; };
 		0626EE9D2A81BF710002F6B6 /* ValidateForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateForm.swift; sourceTree = "<group>"; };
 		063F948F2A426C7600F6EF4D /* DequeuableRegistrableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DequeuableRegistrableCell.swift; sourceTree = "<group>"; };
+		06501D222A82D92A00CC16C1 /* UITextField+PasswordToogle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+PasswordToogle.swift"; sourceTree = "<group>"; };
 		0654BABD2A62E7C000DA348B /* Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
 		0654BABF2A62EF8E00DA348B /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
 		0654BAC02A62EF8E00DA348B /* CharactersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharactersViewController.xib; sourceTree = "<group>"; };
@@ -564,6 +566,7 @@
 			children = (
 				063F948F2A426C7600F6EF4D /* DequeuableRegistrableCell.swift */,
 				0626EE9B2A81BB2C0002F6B6 /* String+ValidityType.swift */,
+				06501D222A82D92A00CC16C1 /* UITextField+PasswordToogle.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -920,6 +923,7 @@
 				067BED8A2A5F729D00AA1B19 /* AppDelegate.swift in Sources */,
 				065AE9EB2A66065D00A0E9CF /* CharacterDetailViewController.swift in Sources */,
 				065AE9F02A660A4400A0E9CF /* CharacterDetailTableViewCell.swift in Sources */,
+				06501D232A82D92A00CC16C1 /* UITextField+PasswordToogle.swift in Sources */,
 				067BED8B2A5F729D00AA1B19 /* AppFactory.swift in Sources */,
 				0626EE9C2A81BB2C0002F6B6 /* String+ValidityType.swift in Sources */,
 				065AE9E62A6580D800A0E9CF /* CharactersProviderProtocol.swift in Sources */,

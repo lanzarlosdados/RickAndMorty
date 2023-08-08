@@ -21,6 +21,7 @@ class RegisterViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         configTextField()
         resetForm()
     }
@@ -29,6 +30,8 @@ class RegisterViewController: BaseViewController {
         email.addTarget(self, action: #selector(handleEmailChange), for: .editingChanged)
         password.addTarget(self, action: #selector(handlePassChange), for: .editingChanged)
         confirmPassword.addTarget(self, action: #selector(handleConfirmPassChange), for: .editingChanged)
+        password.enablePasswordToggle()
+        confirmPassword.enablePasswordToggle()
     }
     
     @IBAction func registerAction(_ sender: Any) {
