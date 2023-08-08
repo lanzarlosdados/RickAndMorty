@@ -18,6 +18,16 @@ class TabBar: UITabBarController {
            setupVCs()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     func setupVCs() {
             viewControllers = [
                 createNavController(for: CharactersViewController(), title: NSLocalizedString("Characters", comment: ""), image: UIImage(systemName: "person.3")!),

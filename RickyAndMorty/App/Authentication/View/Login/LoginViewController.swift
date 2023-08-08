@@ -9,7 +9,7 @@ import UIKit
 
 class LoginViewController: BaseViewController {
     
-
+    @IBOutlet weak var emailError: UILabel!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var registerButton: UIButton!
@@ -18,6 +18,7 @@ class LoginViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        email.delegate = self
         viewModel.getCurrentUser()
     }
     
@@ -41,12 +42,30 @@ class LoginViewController: BaseViewController {
         let vc = RegisterViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+    
 }
-extension LoginViewController :  UserViewProtocol {
+extension LoginViewController :  UserViewProtocol, UITextFieldDelegate {
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        
+        if let email = textField.text {
+            if let errorMessage = ValidateForm.invalidEmail(email)
+                    {
+                        emailError.text = errorMessage
+                        emailError.isHidden = false
+                    }
+                    else
+                    {
+                        emailError.isHidden = true
+                    }
+                }
+    }
     
     func getUser(user: User) {
         print("user login", user)
-//        viewModel.logout()
+        email.text = ""
+        password.text = ""
         let vc = TabBar()
         navigationController?.pushViewController(vc, animated: true)
     }

@@ -23,8 +23,7 @@ class ProfileViewController: BaseViewController, UserViewProtocol {
     
     @IBAction func logoutAction(_ sender: Any) {
         viewModel.logout()
-        navigationController!.popToViewController(navigationController!.viewControllers[0], animated: true)
-
+        navigationController?.popToRootViewController(animated: true)
     }
     
 }

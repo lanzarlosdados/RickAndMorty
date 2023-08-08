@@ -50,7 +50,7 @@
                                     </constraints>
                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 </textField>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RNq-ic-fvd">
                                     <rect key="frame" x="0.0" y="108" width="353" height="0.0"/>
