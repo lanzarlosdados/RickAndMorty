@@ -18,6 +18,7 @@ class LoginViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        resetForm()
         email.delegate = self
         viewModel.getCurrentUser()
     }
@@ -43,7 +44,16 @@ class LoginViewController: BaseViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    func resetForm() {
+            login.isEnabled = false
+            emailError.isHidden = true
+            email.text = ""
+            password.text = ""
+        }
     
+    func checkForValidForm() {
+        login.isEnabled = emailError.isHidden
+    }
 }
 extension LoginViewController :  UserViewProtocol, UITextFieldDelegate {
     
@@ -60,12 +70,12 @@ extension LoginViewController :  UserViewProtocol, UITextFieldDelegate {
                         emailError.isHidden = true
                     }
                 }
+        checkForValidForm()
     }
     
     func getUser(user: User) {
         print("user login", user)
-        email.text = ""
-        password.text = ""
+        resetForm()
         let vc = TabBar()
         navigationController?.pushViewController(vc, animated: true)
     }
