@@ -55,21 +55,20 @@ class RegisterViewController: BaseViewController {
     
     @objc fileprivate func handlePassChange() {
         if let password = password.text
+        {
+            let errorMessage = ValidateForm.invalidPassword(password)
+            
+                if errorMessage != ""
                 {
-            if let errorMessage = ValidateForm.invalidPassword(password)
-                    {
-                        passwordError.text = errorMessage
-                        passwordError.isHidden = false
-                print(errorMessage as Any)
-                print(passwordError.isHidden as Any)
-                    }
-                    else
-                    {
-                        passwordError.isHidden = true
-                    }
+                    passwordError.text = errorMessage
+                    passwordError.isHidden = false
                 }
-                
-                checkForValidForm()
+                else
+                {
+                    passwordError.isHidden = true
+                }
+            }
+        checkForValidForm()
     }
     
     @objc fileprivate func handleConfirmPassChange() {
@@ -94,20 +93,20 @@ class RegisterViewController: BaseViewController {
     func checkForValidForm() {
             if emailError.isHidden && passwordError.isHidden && confirmPassError.isHidden
             {
-                registerButtom.isEnabled = false
+                registerButtom.isEnabled = true
             }
             else
             {
-                registerButtom.isEnabled = true
+                registerButtom.isEnabled = false
             }
         print(registerButtom.isEnabled as Any)
         }
     
     func resetForm() {
             registerButtom.isEnabled = false
-            emailError.isHidden = true
-            passwordError.isHidden = true
-            confirmPassError.isHidden = true
+            emailError.isHidden = false
+            passwordError.isHidden = false
+            confirmPassError.isHidden = false
             email.text = ""
             password.text = ""
             confirmPassword.text = ""

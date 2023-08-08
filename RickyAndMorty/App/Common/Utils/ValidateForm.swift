@@ -18,7 +18,7 @@ class ValidateForm {
         return nil
     }
     
-    static func invalidPassword(_ value: String) -> String?
+    static func invalidPassword(_ value: String) -> String
         {
             var messageError = ""
             if value.count < 8
