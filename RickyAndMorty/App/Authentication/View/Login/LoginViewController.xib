@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="email" destination="SQi-sr-J9e" id="iqL-Vt-HEu"/>
                 <outlet property="emailError" destination="fBp-e8-DX1" id="oSo-xW-yJI"/>
+                <outlet property="facebookButton" destination="NXs-MD-3Cd" id="M05-Tb-Ffj"/>
                 <outlet property="login" destination="Lqh-aW-zcz" id="an3-j2-zMt"/>
                 <outlet property="password" destination="SgL-C1-nhW" id="V53-cr-nyi"/>
                 <outlet property="registerButton" destination="UiP-nO-oFr" id="iVs-X8-lDV"/>
@@ -36,10 +37,10 @@
                     <rect key="frame" x="20" y="209" width="353" height="609"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pwj-V2-vKC">
-                            <rect key="frame" x="0.0" y="0.0" width="353" height="487"/>
+                            <rect key="frame" x="0.0" y="0.0" width="353" height="815.66666666666663"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="DxE-YD-3xt">
-                                    <rect key="frame" x="0.0" y="0.0" width="353" height="108.66666666666667"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="353" height="437.33333333333331"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SQi-sr-J9e">
                                             <rect key="frame" x="0.0" y="0.0" width="353" height="44"/>
@@ -50,7 +51,7 @@
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBp-e8-DX1">
-                                            <rect key="frame" x="0.0" y="44.000000000000007" width="353" height="64.666666666666686"/>
+                                            <rect key="frame" x="0.0" y="44" width="353" height="393.33333333333331"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <color key="textColor" red="0.88618607954545459" green="0.062586106001082387" blue="0.05036770197819631" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
@@ -58,7 +59,7 @@
                                     </subviews>
                                 </stackView>
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SgL-C1-nhW">
-                                    <rect key="frame" x="0.0" y="118.66666666666669" width="353" height="44"/>
+                                    <rect key="frame" x="0.0" y="447.33333333333337" width="353" height="44"/>
                                     <color key="tintColor" systemColor="labelColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="LuI-Xe-PKr"/>
@@ -68,7 +69,7 @@
                                     <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 </textField>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="07b-Ak-OX6">
-                                    <rect key="frame" x="0.0" y="172.66666666666669" width="353" height="0.0"/>
+                                    <rect key="frame" x="0.0" y="501.33333333333337" width="353" height="0.0"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xY4-Ug-JdK">
                                             <rect key="frame" x="0.0" y="0.0" width="353" height="0.0"/>
@@ -79,14 +80,14 @@
                                     </subviews>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lqh-aW-zcz">
-                                    <rect key="frame" x="0.0" y="182.66666666666669" width="353" height="44"/>
+                                    <rect key="frame" x="0.0" y="511.33333333333337" width="353" height="44"/>
                                     <color key="backgroundColor" red="0.16862745098039217" green="0.76078431372549016" blue="0.054901960784313725" alpha="0.58878082482993199" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="W43-ED-IeB"/>
                                     </constraints>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" image="m" title="Login">
+                                    <buttonConfiguration key="configuration" style="plain" title="Sign in">
                                         <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                     </buttonConfiguration>
                                     <userDefinedRuntimeAttributes>
@@ -99,7 +100,7 @@
                                     </connections>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zAg-X7-YLI">
-                                    <rect key="frame" x="0.0" y="236.66666666666669" width="353" height="44"/>
+                                    <rect key="frame" x="0.0" y="565.33333333333337" width="353" height="44"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dgb-sg-aqr">
                                             <rect key="frame" x="166" y="13.666666666666629" width="21" height="17"/>
@@ -116,14 +117,14 @@
                                     </constraints>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDb-Rb-mcU">
-                                    <rect key="frame" x="0.0" y="290.66666666666669" width="353" height="44"/>
+                                    <rect key="frame" x="0.0" y="619.33333333333337" width="353" height="44"/>
                                     <color key="backgroundColor" systemColor="systemRedColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="BYN-Va-uhJ"/>
                                     </constraints>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="Continue whit Google">
+                                    <buttonConfiguration key="configuration" style="plain" title="Sign in whit Google">
                                         <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                     </buttonConfiguration>
                                     <userDefinedRuntimeAttributes>
@@ -133,14 +134,14 @@
                                     </userDefinedRuntimeAttributes>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXs-MD-3Cd">
-                                    <rect key="frame" x="0.0" y="344.66666666666663" width="353" height="44"/>
+                                    <rect key="frame" x="0.0" y="673.33333333333337" width="353" height="44"/>
                                     <color key="backgroundColor" red="0.25882352939999997" green="0.4039215686" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="cQM-vD-kgb"/>
                                     </constraints>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="Continue whit Facebook">
+                                    <buttonConfiguration key="configuration" style="plain" title="Sign in whit Facebook">
                                         <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                     </buttonConfiguration>
                                     <userDefinedRuntimeAttributes>
@@ -148,16 +149,19 @@
                                             <integer key="value" value="8"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="facebookButtonAction:" destination="-1" eventType="touchUpInside" id="2gV-Vg-Ly0"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3N-sK-4a4">
-                                    <rect key="frame" x="0.0" y="398.66666666666663" width="353" height="44"/>
+                                    <rect key="frame" x="0.0" y="727.33333333333337" width="353" height="44"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="Nlj-MI-ENG"/>
                                     </constraints>
                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" title="Continue whit Apple">
+                                    <buttonConfiguration key="configuration" style="plain" title="Sign in whit Apple">
                                         <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                     </buttonConfiguration>
                                     <userDefinedRuntimeAttributes>
@@ -167,7 +171,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </button>
                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sL8-2Z-L0g">
-                                    <rect key="frame" x="0.0" y="452.66666666666663" width="353" height="34.333333333333314"/>
+                                    <rect key="frame" x="0.0" y="781.33333333333337" width="353" height="34.333333333333371"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dont have an account?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXp-rI-HQR">
                                             <rect key="frame" x="0.0" y="0.0" width="176.66666666666666" height="34.333333333333336"/>
@@ -217,7 +221,6 @@
     </objects>
     <resources>
         <image name="Rick-And-Morty-Logo-700x394" width="700" height="394"/>
-        <image name="m" width="128" height="128"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

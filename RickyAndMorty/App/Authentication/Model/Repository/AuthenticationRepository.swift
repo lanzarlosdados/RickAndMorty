@@ -9,23 +9,29 @@ import Foundation
 
 final class AuthenticationRepository {
     
+    private let authenticationFirebase = AuthenticationFirebase()
+    
     func getCurrentUser() -> User? {
-        AuthenticationFirebase.getCurrentUser()
+        authenticationFirebase.getCurrentUser()
     }
     
     func logOut() throws {
-        try AuthenticationFirebase.logOut()
+        try authenticationFirebase.logOut()
     }
     
     func createNewUser(email: String, password: String, completionBlock: @escaping (Result<User,Error>) -> Void) {
-        AuthenticationFirebase.createNewUser(email: email,
+        authenticationFirebase.createNewUser(email: email,
                                             password: password,
                                              completionBlock: completionBlock)
     }
     
     func login(email: String, password: String, completionBlock: @escaping (Result<User,Error>) -> Void) {
-        AuthenticationFirebase.login(email: email,
+        authenticationFirebase.login(email: email,
                                             password: password,
                                              completionBlock: completionBlock)
+    }
+    
+    func loginWhitFacebook(completionBlock: @escaping (Result<User,Error>) -> Void) {
+        authenticationFirebase.loginWhitFacebook(completionBlock: completionBlock)
     }
 }

@@ -9,6 +9,7 @@ import UIKit
 
 class LoginViewController: BaseViewController {
     
+    @IBOutlet weak var facebookButton: UIButton!
     @IBOutlet weak var emailError: UILabel!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var email: UITextField!
@@ -20,6 +21,7 @@ class LoginViewController: BaseViewController {
         super.viewDidLoad()
         resetForm()
         email.delegate = self
+        password.enablePasswordToggle()
         viewModel.getCurrentUser()
     }
     
@@ -31,6 +33,7 @@ class LoginViewController: BaseViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
+        resetForm()
     }
 
     @IBAction func loginAction(_ sender: Any) {
@@ -42,6 +45,10 @@ class LoginViewController: BaseViewController {
     @IBAction func registerAction(_ sender: Any) {
         let vc = RegisterViewController()
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func facebookButtonAction(_ sender: Any) {
+        viewModel.loginWhitFacebook()
     }
     
     func resetForm() {
@@ -75,7 +82,6 @@ extension LoginViewController :  UserViewProtocol, UITextFieldDelegate {
     
     func getUser(user: User) {
         print("user login", user)
-        resetForm()
         let vc = TabBar()
         navigationController?.pushViewController(vc, animated: true)
     }

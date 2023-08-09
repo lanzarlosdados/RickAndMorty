@@ -12,6 +12,8 @@
 		0626EE9C2A81BB2C0002F6B6 /* String+ValidityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0626EE9B2A81BB2C0002F6B6 /* String+ValidityType.swift */; };
 		0626EE9E2A81BF710002F6B6 /* ValidateForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0626EE9D2A81BF710002F6B6 /* ValidateForm.swift */; };
 		06501D232A82D92A00CC16C1 /* UITextField+PasswordToogle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06501D222A82D92A00CC16C1 /* UITextField+PasswordToogle.swift */; };
+		06501D262A83E12C00CC16C1 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 06501D252A83E12C00CC16C1 /* FacebookLogin */; };
+		06501D292A83F64500CC16C1 /* FacebookAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06501D282A83F64500CC16C1 /* FacebookAuthentication.swift */; };
 		0654BABE2A62E7C000DA348B /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654BABD2A62E7C000DA348B /* Characters.swift */; };
 		0654BAC12A62EF8E00DA348B /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654BABF2A62EF8E00DA348B /* CharactersViewController.swift */; };
 		0654BAC22A62EF8E00DA348B /* CharactersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0654BAC02A62EF8E00DA348B /* CharactersViewController.xib */; };
@@ -99,6 +101,8 @@
 		0626EE9D2A81BF710002F6B6 /* ValidateForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateForm.swift; sourceTree = "<group>"; };
 		063F948F2A426C7600F6EF4D /* DequeuableRegistrableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DequeuableRegistrableCell.swift; sourceTree = "<group>"; };
 		06501D222A82D92A00CC16C1 /* UITextField+PasswordToogle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+PasswordToogle.swift"; sourceTree = "<group>"; };
+		06501D272A83F3D000CC16C1 /* RickyAndMorty.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RickyAndMorty.entitlements; sourceTree = "<group>"; };
+		06501D282A83F64500CC16C1 /* FacebookAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuthentication.swift; sourceTree = "<group>"; };
 		0654BABD2A62E7C000DA348B /* Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
 		0654BABF2A62EF8E00DA348B /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
 		0654BAC02A62EF8E00DA348B /* CharactersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharactersViewController.xib; sourceTree = "<group>"; };
@@ -168,6 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06501D262A83E12C00CC16C1 /* FacebookLogin in Frameworks */,
 				06573D582A79ECB1003B4466 /* FirebaseAnalyticsSwift in Frameworks */,
 				06573D562A79ECB1003B4466 /* FirebaseAnalytics in Frameworks */,
 				29DE1A22D4C5B9F96C285791 /* Pods_RickyAndMorty.framework in Frameworks */,
@@ -469,6 +474,7 @@
 		06B9C7952A3A886F009C6FFD /* RickyAndMorty */ = {
 			isa = PBXGroup;
 			children = (
+				06501D272A83F3D000CC16C1 /* RickyAndMorty.entitlements */,
 				06B9C7C62A3A8B7C009C6FFD /* App */,
 				06B9C7A42A3A8871009C6FFD /* Info.plist */,
 				06604E332A7C3A3C00A500CC /* GoogleService-Info.plist */,
@@ -533,6 +539,7 @@
 				067BED532A5EEBF700AA1B19 /* NetworkError.swift */,
 				067BED562A5EED4600AA1B19 /* RequestModel.swift */,
 				06604E2B2A7C23D200A500CC /* AuthenticationFirebase.swift */,
+				06501D282A83F64500CC16C1 /* FacebookAuthentication.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -729,6 +736,7 @@
 				06573D552A79ECB1003B4466 /* FirebaseAnalytics */,
 				06573D572A79ECB1003B4466 /* FirebaseAnalyticsSwift */,
 				06604E192A7BE43700A500CC /* FirebaseAuth */,
+				06501D252A83E12C00CC16C1 /* FacebookLogin */,
 			);
 			productName = RickyAndMorty;
 			productReference = 06B9C7932A3A886F009C6FFD /* RickyAndMorty.app */;
@@ -803,6 +811,7 @@
 			mainGroup = 06B9C78A2A3A886F009C6FFD;
 			packageReferences = (
 				06573D542A79ECB1003B4466 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				06501D242A83E12C00CC16C1 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 			);
 			productRefGroup = 06B9C7942A3A886F009C6FFD /* Products */;
 			projectDirPath = "";
@@ -934,6 +943,7 @@
 				065725082A755CDE004B2F1F /* LoginViewController.swift in Sources */,
 				06604E232A7C164400A500CC /* User.swift in Sources */,
 				065AE9E82A65875300A0E9CF /* CharactersPresenter.swift in Sources */,
+				06501D292A83F64500CC16C1 /* FacebookAuthentication.swift in Sources */,
 				06604E302A7C265900A500CC /* AuthenticationViewModel.swift in Sources */,
 				067BED8C2A5F729D00AA1B19 /* HomeFactory.swift in Sources */,
 				067BED8D2A5F729D00AA1B19 /* HomeCoordinator.swift in Sources */,
@@ -1113,6 +1123,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RickyAndMorty/RickyAndMorty.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = R8RFB244C2;
@@ -1141,6 +1152,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RickyAndMorty/RickyAndMorty.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = R8RFB244C2;
@@ -1281,6 +1293,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		06501D242A83E12C00CC16C1 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.0.0;
+			};
+		};
 		06573D542A79ECB1003B4466 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -1292,6 +1312,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		06501D252A83E12C00CC16C1 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 06501D242A83E12C00CC16C1 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
 		06573D552A79ECB1003B4466 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 06573D542A79ECB1003B4466 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
