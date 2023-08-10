@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 final class AuthenticationRepository {
     
@@ -33,5 +34,9 @@ final class AuthenticationRepository {
     
     func loginWhitFacebook(completionBlock: @escaping (Result<User,Error>) -> Void) {
         authenticationFirebase.loginWhitFacebook(completionBlock: completionBlock)
+    }
+    
+    func loginWhitGoogle(viewController: UIViewController, completionBlock: @escaping (Result<User,Error>) -> Void) {
+        authenticationFirebase.loginWhitGoogle(viewController: viewController, completionBlock: completionBlock)
     }
 }

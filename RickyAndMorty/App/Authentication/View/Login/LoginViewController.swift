@@ -9,6 +9,7 @@ import UIKit
 
 class LoginViewController: BaseViewController {
     
+    @IBOutlet weak var googleButton: UIButton!
     @IBOutlet weak var facebookButton: UIButton!
     @IBOutlet weak var emailError: UILabel!
     @IBOutlet weak var password: UITextField!
@@ -51,6 +52,9 @@ class LoginViewController: BaseViewController {
         viewModel.loginWhitFacebook()
     }
     
+    @IBAction func googleButttonAction(_ sender: Any) {
+        viewModel.loginWhitGoogle(viewController: self)
+    }
     func resetForm() {
             login.isEnabled = false
             emailError.isHidden = true
