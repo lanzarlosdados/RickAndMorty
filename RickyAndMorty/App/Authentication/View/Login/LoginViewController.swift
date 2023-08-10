@@ -55,6 +55,7 @@ class LoginViewController: BaseViewController {
     @IBAction func googleButttonAction(_ sender: Any) {
         viewModel.loginWhitGoogle(viewController: self)
     }
+    
     func resetForm() {
             login.isEnabled = false
             emailError.isHidden = true
