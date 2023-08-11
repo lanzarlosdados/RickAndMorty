@@ -12,6 +12,7 @@ protocol UserViewProtocol : AnyObject, BaseViewProtocol {
     func getUser(user : User)
 }
 
+@MainActor
 final class AuthenticationViewModel {
     
     weak var delegate : UserViewProtocol?
