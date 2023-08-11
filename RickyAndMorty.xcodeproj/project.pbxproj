@@ -11,9 +11,11 @@
 		0626EE9A2A81307F0002F6B6 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0626EE982A81307F0002F6B6 /* ProfileViewController.xib */; };
 		0626EE9C2A81BB2C0002F6B6 /* String+ValidityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0626EE9B2A81BB2C0002F6B6 /* String+ValidityType.swift */; };
 		0626EE9E2A81BF710002F6B6 /* ValidateForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0626EE9D2A81BF710002F6B6 /* ValidateForm.swift */; };
-		06501D232A82D92A00CC16C1 /* UITextField+PasswordToogle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06501D222A82D92A00CC16C1 /* UITextField+PasswordToogle.swift */; };
+		06501D232A82D92A00CC16C1 /* UITextField+Extenison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06501D222A82D92A00CC16C1 /* UITextField+Extenison.swift */; };
 		06501D262A83E12C00CC16C1 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 06501D252A83E12C00CC16C1 /* FacebookLogin */; };
 		06501D292A83F64500CC16C1 /* FacebookAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06501D282A83F64500CC16C1 /* FacebookAuthentication.swift */; };
+		0652ACDC2A86A4480048405F /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0652ACDA2A86A4480048405F /* EditProfileViewController.swift */; };
+		0652ACDD2A86A4480048405F /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0652ACDB2A86A4480048405F /* EditProfileViewController.xib */; };
 		0654BABE2A62E7C000DA348B /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654BABD2A62E7C000DA348B /* Characters.swift */; };
 		0654BAC12A62EF8E00DA348B /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654BABF2A62EF8E00DA348B /* CharactersViewController.swift */; };
 		0654BAC22A62EF8E00DA348B /* CharactersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0654BAC02A62EF8E00DA348B /* CharactersViewController.xib */; };
@@ -102,9 +104,11 @@
 		0626EE9B2A81BB2C0002F6B6 /* String+ValidityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ValidityType.swift"; sourceTree = "<group>"; };
 		0626EE9D2A81BF710002F6B6 /* ValidateForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateForm.swift; sourceTree = "<group>"; };
 		063F948F2A426C7600F6EF4D /* DequeuableRegistrableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DequeuableRegistrableCell.swift; sourceTree = "<group>"; };
-		06501D222A82D92A00CC16C1 /* UITextField+PasswordToogle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+PasswordToogle.swift"; sourceTree = "<group>"; };
+		06501D222A82D92A00CC16C1 /* UITextField+Extenison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extenison.swift"; sourceTree = "<group>"; };
 		06501D272A83F3D000CC16C1 /* RickyAndMorty.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RickyAndMorty.entitlements; sourceTree = "<group>"; };
 		06501D282A83F64500CC16C1 /* FacebookAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuthentication.swift; sourceTree = "<group>"; };
+		0652ACDA2A86A4480048405F /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		0652ACDB2A86A4480048405F /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
 		0654BABD2A62E7C000DA348B /* Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
 		0654BABF2A62EF8E00DA348B /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
 		0654BAC02A62EF8E00DA348B /* CharactersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharactersViewController.xib; sourceTree = "<group>"; };
@@ -204,10 +208,36 @@
 		0626EE962A8130630002F6B6 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				0652ACD72A86A4120048405F /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		0652ACD72A86A4120048405F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0652ACD92A86A4280048405F /* EditProfile */,
+				0652ACD82A86A41F0048405F /* Profile */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0652ACD82A86A41F0048405F /* Profile */ = {
+			isa = PBXGroup;
+			children = (
 				0626EE972A81307F0002F6B6 /* ProfileViewController.swift */,
 				0626EE982A81307F0002F6B6 /* ProfileViewController.xib */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		0652ACD92A86A4280048405F /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				0652ACDA2A86A4480048405F /* EditProfileViewController.swift */,
+				0652ACDB2A86A4480048405F /* EditProfileViewController.xib */,
+			);
+			path = EditProfile;
 			sourceTree = "<group>";
 		};
 		0654BAC32A62EFB400DA348B /* Model */ = {
@@ -578,7 +608,7 @@
 			children = (
 				063F948F2A426C7600F6EF4D /* DequeuableRegistrableCell.swift */,
 				0626EE9B2A81BB2C0002F6B6 /* String+ValidityType.swift */,
-				06501D222A82D92A00CC16C1 /* UITextField+PasswordToogle.swift */,
+				06501D222A82D92A00CC16C1 /* UITextField+Extenison.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -840,6 +870,7 @@
 				0654BAC22A62EF8E00DA348B /* CharactersViewController.xib in Resources */,
 				06B9C7A32A3A8871009C6FFD /* LaunchScreen.storyboard in Resources */,
 				0626EE9A2A81307F0002F6B6 /* ProfileViewController.xib in Resources */,
+				0652ACDD2A86A4480048405F /* EditProfileViewController.xib in Resources */,
 				0656FA8C2A6A060D00AA0CB8 /* LocationCell.xib in Resources */,
 				066350432A67639F00F78A83 /* LocationsViewController.xib in Resources */,
 				065AE9EC2A66065D00A0E9CF /* CharacterDetailViewController.xib in Resources */,
@@ -940,7 +971,7 @@
 				067BED8A2A5F729D00AA1B19 /* AppDelegate.swift in Sources */,
 				065AE9EB2A66065D00A0E9CF /* CharacterDetailViewController.swift in Sources */,
 				065AE9F02A660A4400A0E9CF /* CharacterDetailTableViewCell.swift in Sources */,
-				06501D232A82D92A00CC16C1 /* UITextField+PasswordToogle.swift in Sources */,
+				06501D232A82D92A00CC16C1 /* UITextField+Extenison.swift in Sources */,
 				067BED8B2A5F729D00AA1B19 /* AppFactory.swift in Sources */,
 				0626EE9C2A81BB2C0002F6B6 /* String+ValidityType.swift in Sources */,
 				065AE9E62A6580D800A0E9CF /* CharactersProviderProtocol.swift in Sources */,
@@ -958,6 +989,7 @@
 				0683CF332A6D9C7100E18293 /* EpisodeProvider.swift in Sources */,
 				0663503E2A67638F00F78A83 /* EpisodesViewController.swift in Sources */,
 				067BED8E2A5F729D00AA1B19 /* Coordinator.swift in Sources */,
+				0652ACDC2A86A4480048405F /* EditProfileViewController.swift in Sources */,
 				067BED8F2A5F729D00AA1B19 /* AppCoordinator.swift in Sources */,
 				067BED902A5F729D00AA1B19 /* Utils.swift in Sources */,
 				067BED912A5F729D00AA1B19 /* DequeuableRegistrableCell.swift in Sources */,
