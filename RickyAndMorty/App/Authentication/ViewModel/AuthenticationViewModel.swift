@@ -12,7 +12,6 @@ protocol UserViewProtocol : AnyObject, BaseViewProtocol {
     func getUser(user : User)
 }
 
-@MainActor
 final class AuthenticationViewModel {
     
     weak var delegate : UserViewProtocol?
@@ -27,14 +26,11 @@ final class AuthenticationViewModel {
     func createNewUser(email: String, password: String){
         delegate?.loadingView(.show)
         
-        defer{
-            delegate?.loadingView(.hide)
-        }
-        
         authRepository.createNewUser(email: email, password: password) { [weak self] result in
             switch result {
             case .success(let user):
                 self?.delegate?.getUser(user: user)
+                self?.delegate?.loadingView(.hide)
             case .failure(let error):
                 self?.delegate?.showError(error.localizedDescription, callback: nil)
             }
@@ -43,15 +39,12 @@ final class AuthenticationViewModel {
     
     func login(email: String, password: String){
         delegate?.loadingView(.show)
-        
-        defer{
-            delegate?.loadingView(.hide)
-        }
-        
+           
         authRepository.login(email: email, password: password) { [weak self] result in
             switch result {
             case .success(let user):
                 self?.delegate?.getUser(user: user)
+                self?.delegate?.loadingView(.hide)
             case .failure(let error):
                 self?.delegate?.showError(error.localizedDescription, callback: nil)
             }
@@ -60,15 +53,12 @@ final class AuthenticationViewModel {
     
     func loginWhitFacebook(){
         delegate?.loadingView(.show)
-        
-        defer{
-            delegate?.loadingView(.hide)
-        }
-        
+
         authRepository.loginWhitFacebook() { [weak self] result in
             switch result {
             case .success(let user):
                 self?.delegate?.getUser(user: user)
+                self?.delegate?.loadingView(.hide)
             case .failure(let error):
                 print(error.localizedDescription)
                 self?.delegate?.showError("!Lo sentimos hubo un error, vuelve a intentar por favor!", callback: nil)
@@ -79,14 +69,11 @@ final class AuthenticationViewModel {
     func loginWhitGoogle(viewController: UIViewController){
         delegate?.loadingView(.show)
         
-        defer{
-            delegate?.loadingView(.hide)
-        }
-        
         authRepository.loginWhitGoogle(viewController: viewController) { [weak self] result in
             switch result {
             case .success(let user):
                 self?.delegate?.getUser(user: user)
+                self?.delegate?.loadingView(.hide)
             case .failure(let error):
                 print(error.localizedDescription)
                 self?.delegate?.showError("!Lo sentimos hubo un error, vuelve a intentar por favor!", callback: nil)

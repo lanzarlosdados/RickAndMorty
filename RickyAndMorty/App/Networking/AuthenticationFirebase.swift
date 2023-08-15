@@ -26,7 +26,7 @@ final class AuthenticationFirebase{
         
         
         guard let userId = Auth.auth().currentUser?.uid else {return}
-        let imageName = String("\(dateFormatter.string(from: date)).png")
+        let imageName = "imageProfile.png"
         let storageRef = storageRef.child(userId).child(imageName)
         
         if let uploadData = imageProfile.pngData() {

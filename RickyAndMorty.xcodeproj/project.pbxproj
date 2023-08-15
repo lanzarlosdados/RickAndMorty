@@ -11,6 +11,10 @@
 		0626EE9A2A81307F0002F6B6 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0626EE982A81307F0002F6B6 /* ProfileViewController.xib */; };
 		0626EE9C2A81BB2C0002F6B6 /* String+ValidityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0626EE9B2A81BB2C0002F6B6 /* String+ValidityType.swift */; };
 		0626EE9E2A81BF710002F6B6 /* ValidateForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0626EE9D2A81BF710002F6B6 /* ValidateForm.swift */; };
+		064F0A3E2A8BE57300131BA9 /* CharactersFavoutitesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064F0A3C2A8BE57300131BA9 /* CharactersFavoutitesViewController.swift */; };
+		064F0A3F2A8BE57300131BA9 /* CharactersFavoutitesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 064F0A3D2A8BE57300131BA9 /* CharactersFavoutitesViewController.xib */; };
+		064F0A462A8BEA8A00131BA9 /* CharactersFavouritesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064F0A442A8BEA8A00131BA9 /* CharactersFavouritesCell.swift */; };
+		064F0A472A8BEA8A00131BA9 /* CharactersFavouritesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 064F0A452A8BEA8A00131BA9 /* CharactersFavouritesCell.xib */; };
 		06501D232A82D92A00CC16C1 /* UITextField+Extenison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06501D222A82D92A00CC16C1 /* UITextField+Extenison.swift */; };
 		06501D262A83E12C00CC16C1 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 06501D252A83E12C00CC16C1 /* FacebookLogin */; };
 		06501D292A83F64500CC16C1 /* FacebookAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06501D282A83F64500CC16C1 /* FacebookAuthentication.swift */; };
@@ -107,6 +111,10 @@
 		0626EE9B2A81BB2C0002F6B6 /* String+ValidityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ValidityType.swift"; sourceTree = "<group>"; };
 		0626EE9D2A81BF710002F6B6 /* ValidateForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateForm.swift; sourceTree = "<group>"; };
 		063F948F2A426C7600F6EF4D /* DequeuableRegistrableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DequeuableRegistrableCell.swift; sourceTree = "<group>"; };
+		064F0A3C2A8BE57300131BA9 /* CharactersFavoutitesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersFavoutitesViewController.swift; sourceTree = "<group>"; };
+		064F0A3D2A8BE57300131BA9 /* CharactersFavoutitesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharactersFavoutitesViewController.xib; sourceTree = "<group>"; };
+		064F0A442A8BEA8A00131BA9 /* CharactersFavouritesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersFavouritesCell.swift; sourceTree = "<group>"; };
+		064F0A452A8BEA8A00131BA9 /* CharactersFavouritesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharactersFavouritesCell.xib; sourceTree = "<group>"; };
 		06501D222A82D92A00CC16C1 /* UITextField+Extenison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extenison.swift"; sourceTree = "<group>"; };
 		06501D272A83F3D000CC16C1 /* RickyAndMorty.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RickyAndMorty.entitlements; sourceTree = "<group>"; };
 		06501D282A83F64500CC16C1 /* FacebookAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuthentication.swift; sourceTree = "<group>"; };
@@ -219,6 +227,49 @@
 				0652ACD72A86A4120048405F /* View */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		064F0A3B2A8BE39C00131BA9 /* CharactersFavourites */ = {
+			isa = PBXGroup;
+			children = (
+				064F0A422A8BE60A00131BA9 /* Model */,
+				064F0A412A8BE5E900131BA9 /* ViewModel */,
+				064F0A402A8BE59000131BA9 /* View */,
+			);
+			path = CharactersFavourites;
+			sourceTree = "<group>";
+		};
+		064F0A402A8BE59000131BA9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				064F0A432A8BEA6400131BA9 /* Cell */,
+				064F0A3C2A8BE57300131BA9 /* CharactersFavoutitesViewController.swift */,
+				064F0A3D2A8BE57300131BA9 /* CharactersFavoutitesViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		064F0A412A8BE5E900131BA9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		064F0A422A8BE60A00131BA9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		064F0A432A8BEA6400131BA9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				064F0A442A8BEA8A00131BA9 /* CharactersFavouritesCell.swift */,
+				064F0A452A8BEA8A00131BA9 /* CharactersFavouritesCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		0652ACD72A86A4120048405F /* View */ = {
@@ -559,9 +610,10 @@
 		06B9C7C62A3A8B7C009C6FFD /* App */ = {
 			isa = PBXGroup;
 			children = (
+				0656FA842A69F35700AA0CB8 /* TabBar */,
+				064F0A3B2A8BE39C00131BA9 /* CharactersFavourites */,
 				0626EE962A8130630002F6B6 /* Profile */,
 				06604E292A7C1AD500A500CC /* Authentication */,
-				0656FA842A69F35700AA0CB8 /* TabBar */,
 				06B9C7E62A3A9060009C6FFD /* LaunchScreen */,
 				06B9C7E32A3A8EE0009C6FFD /* Locations */,
 				06B9C7E12A3A8EC4009C6FFD /* Episodes */,
@@ -900,6 +952,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06604E312A7C3A3C00A500CC /* GoogleService-Info.plist in Resources */,
+				064F0A472A8BEA8A00131BA9 /* CharactersFavouritesCell.xib in Resources */,
 				0654BAC22A62EF8E00DA348B /* CharactersViewController.xib in Resources */,
 				06B9C7A32A3A8871009C6FFD /* LaunchScreen.storyboard in Resources */,
 				0626EE9A2A81307F0002F6B6 /* ProfileViewController.xib in Resources */,
@@ -911,6 +964,7 @@
 				065AE9F52A660A7600A0E9CF /* EpisodesDescripcionTableViewCell.xib in Resources */,
 				065AE9F12A660A4400A0E9CF /* CharacterDetailTableViewCell.xib in Resources */,
 				06604E202A7BEEBD00A500CC /* RegisterViewController.xib in Resources */,
+				064F0A3F2A8BE57300131BA9 /* CharactersFavoutitesViewController.xib in Resources */,
 				065725092A755CDE004B2F1F /* LoginViewController.xib in Resources */,
 				0657B1882A72ED48000AC576 /* CharactersCollectionViewCell.xib in Resources */,
 				0663503F2A67638F00F78A83 /* EpisodesViewController.xib in Resources */,
@@ -981,6 +1035,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				064F0A3E2A8BE57300131BA9 /* CharactersFavoutitesViewController.swift in Sources */,
 				0683CF2D2A6D9B6000E18293 /* Episodes.swift in Sources */,
 				065AE9F42A660A7600A0E9CF /* EpisodesDescripcionTableViewCell.swift in Sources */,
 				0626EE9E2A81BF710002F6B6 /* ValidateForm.swift in Sources */,
@@ -1019,6 +1074,7 @@
 				065AE9E82A65875300A0E9CF /* CharactersPresenter.swift in Sources */,
 				06501D292A83F64500CC16C1 /* FacebookAuthentication.swift in Sources */,
 				06604E302A7C265900A500CC /* AuthenticationViewModel.swift in Sources */,
+				064F0A462A8BEA8A00131BA9 /* CharactersFavouritesCell.swift in Sources */,
 				067BED8C2A5F729D00AA1B19 /* HomeFactory.swift in Sources */,
 				067BED8D2A5F729D00AA1B19 /* HomeCoordinator.swift in Sources */,
 				0683CF332A6D9C7100E18293 /* EpisodeProvider.swift in Sources */,
