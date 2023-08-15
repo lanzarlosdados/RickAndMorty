@@ -9,4 +9,6 @@ import Foundation
 
 struct User {
     let email : String
+    let displayName : String?
+    let profileImageUrl : URL?
 }

@@ -12,9 +12,15 @@ enum LoadingViewState{
     case hide
 }
 
+enum TypeMessage : String{
+    case error = "Error"
+    case success = "Success"
+}
+
 protocol BaseViewProtocol{
     func loadingView(_ state : LoadingViewState)
     func showError(_ error : String, callback : (()->Void)?)
+    func showMessage(_ typeMessage: TypeMessage,_ message : String, callback : (()->Void)?)
 }
 
 class BaseViewController: UIViewController {
@@ -42,6 +48,27 @@ extension BaseViewController{
         }
         alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { action in
             if action.style == .cancel{
+                print("ok button pressed")
+            }
+        }))
+        
+        present(alert, animated: true)
+    }
+    
+    func showMessage(_ typeMessage: TypeMessage,_ message : String, callback : (()->Void)?){
+        let alert = UIAlertController(title: typeMessage.rawValue, message: message, preferredStyle: .alert)
+        
+        if let callback = callback{
+            alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: { action in
+                if action.style == .default{
+                    callback()
+                    print("retry button pressed")
+                }
+            }))
+        }
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { action in
+            if action.style == .cancel{
+                self.navigationController?.popViewController(animated: true)
                 print("ok button pressed")
             }
         }))

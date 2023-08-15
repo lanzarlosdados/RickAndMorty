@@ -10,6 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditProfileViewController" customModule="RickyAndMorty" customModuleProvider="target">
             <connections>
+                <outlet property="editImage" destination="neT-V3-IEV" id="cRr-RQ-Dyy"/>
+                <outlet property="errorMessage" destination="ZlP-ll-AeX" id="BWR-MH-xTF"/>
+                <outlet property="imageProfile" destination="mca-o9-oub" id="cEB-4B-N26"/>
+                <outlet property="name" destination="GTc-Ym-RVc" id="xvp-QR-bbg"/>
                 <outlet property="saveBtn" destination="4GY-tB-wY8" id="TJM-ye-nbB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -23,7 +27,7 @@
                     <rect key="frame" x="16" y="59" width="361" height="685"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WDg-zG-Rzt">
-                            <rect key="frame" x="0.0" y="0.0" width="361" height="308"/>
+                            <rect key="frame" x="0.0" y="0.0" width="361" height="264"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rhE-SP-2om">
                                     <rect key="frame" x="0.0" y="0.0" width="361" height="200"/>
@@ -50,21 +54,22 @@
                                             <buttonConfiguration key="configuration" style="plain" title="Edit image">
                                                 <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
                                             </buttonConfiguration>
+                                            <connections>
+                                                <action selector="editImageAction:" destination="-1" eventType="touchUpInside" id="eMm-ae-mYH"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZlP-ll-AeX">
+                                    <rect key="frame" x="0.0" y="210" width="361" height="0.0"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <color key="textColor" red="0.88618607949999995" green="0.062586106000000002" blue="0.050367701979999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GTc-Ym-RVc">
-                                    <rect key="frame" x="0.0" y="210" width="361" height="44"/>
+                                    <rect key="frame" x="0.0" y="220" width="361" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="h3A-EK-xfA"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                </textField>
-                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="LastName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hLg-ZW-g63">
-                                    <rect key="frame" x="0.0" y="264" width="361" height="44"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="44" id="pAC-Yq-2M7"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
