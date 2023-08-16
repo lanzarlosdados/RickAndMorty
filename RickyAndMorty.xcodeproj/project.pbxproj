@@ -18,6 +18,9 @@
 		06501D232A82D92A00CC16C1 /* UITextField+Extenison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06501D222A82D92A00CC16C1 /* UITextField+Extenison.swift */; };
 		06501D262A83E12C00CC16C1 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 06501D252A83E12C00CC16C1 /* FacebookLogin */; };
 		06501D292A83F64500CC16C1 /* FacebookAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06501D282A83F64500CC16C1 /* FacebookAuthentication.swift */; };
+		0652533D2A8D4C4A006F1215 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 0652533C2A8D4C4A006F1215 /* FirebaseFirestore */; };
+		0652533F2A8D4C4A006F1215 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0652533E2A8D4C4A006F1215 /* FirebaseFirestoreSwift */; };
+		065253422A8D5514006F1215 /* FirestoreDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065253412A8D5514006F1215 /* FirestoreDatabase.swift */; };
 		0652ACDC2A86A4480048405F /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0652ACDA2A86A4480048405F /* EditProfileViewController.swift */; };
 		0652ACDD2A86A4480048405F /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0652ACDB2A86A4480048405F /* EditProfileViewController.xib */; };
 		0654BABE2A62E7C000DA348B /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654BABD2A62E7C000DA348B /* Characters.swift */; };
@@ -118,6 +121,7 @@
 		06501D222A82D92A00CC16C1 /* UITextField+Extenison.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extenison.swift"; sourceTree = "<group>"; };
 		06501D272A83F3D000CC16C1 /* RickyAndMorty.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RickyAndMorty.entitlements; sourceTree = "<group>"; };
 		06501D282A83F64500CC16C1 /* FacebookAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuthentication.swift; sourceTree = "<group>"; };
+		065253412A8D5514006F1215 /* FirestoreDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDatabase.swift; sourceTree = "<group>"; };
 		0652ACDA2A86A4480048405F /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		0652ACDB2A86A4480048405F /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
 		0654BABD2A62E7C000DA348B /* Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
@@ -197,8 +201,10 @@
 				06573D562A79ECB1003B4466 /* FirebaseAnalytics in Frameworks */,
 				29DE1A22D4C5B9F96C285791 /* Pods_RickyAndMorty.framework in Frameworks */,
 				065607E22A8AA275000B1B2F /* FirebaseStorage in Frameworks */,
+				0652533D2A8D4C4A006F1215 /* FirebaseFirestore in Frameworks */,
 				06604E1A2A7BE43700A500CC /* FirebaseAuth in Frameworks */,
 				065B36562A8537AB00105B18 /* GoogleSignIn in Frameworks */,
+				0652533F2A8D4C4A006F1215 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -659,6 +665,7 @@
 				06604E2B2A7C23D200A500CC /* AuthenticationFirebase.swift */,
 				06501D282A83F64500CC16C1 /* FacebookAuthentication.swift */,
 				065B36572A854C8E00105B18 /* GoogleAuthentication.swift */,
+				065253412A8D5514006F1215 /* FirestoreDatabase.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -858,6 +865,8 @@
 				06501D252A83E12C00CC16C1 /* FacebookLogin */,
 				065B36552A8537AB00105B18 /* GoogleSignIn */,
 				065607E12A8AA275000B1B2F /* FirebaseStorage */,
+				0652533C2A8D4C4A006F1215 /* FirebaseFirestore */,
+				0652533E2A8D4C4A006F1215 /* FirebaseFirestoreSwift */,
 			);
 			productName = RickyAndMorty;
 			productReference = 06B9C7932A3A886F009C6FFD /* RickyAndMorty.app */;
@@ -1035,6 +1044,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				065253422A8D5514006F1215 /* FirestoreDatabase.swift in Sources */,
 				064F0A3E2A8BE57300131BA9 /* CharactersFavoutitesViewController.swift in Sources */,
 				0683CF2D2A6D9B6000E18293 /* Episodes.swift in Sources */,
 				065AE9F42A660A7600A0E9CF /* EpisodesDescripcionTableViewCell.swift in Sources */,
@@ -1455,6 +1465,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 06501D242A83E12C00CC16C1 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
 			productName = FacebookLogin;
+		};
+		0652533C2A8D4C4A006F1215 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 06573D542A79ECB1003B4466 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		0652533E2A8D4C4A006F1215 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 06573D542A79ECB1003B4466 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
 		};
 		065607E12A8AA275000B1B2F /* FirebaseStorage */ = {
 			isa = XCSwiftPackageProductDependency;
