@@ -9,8 +9,7 @@ import Foundation
 import Combine
 import UIKit
 
-@MainActor
-final class ProfileViewModel: ObservableObject {
+final class ProfileViewModel {
     
     var delegate : BaseViewProtocol?
     private let profileRepository : ProfileRepository

@@ -6,12 +6,16 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CharactersFavouritesCell: UITableViewCell {
 
+    @IBOutlet weak var imageCharacter: UIImageView!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var type: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -20,7 +24,10 @@ class CharactersFavouritesCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configCell(){
-        
+    func configCell(characterFavourite : CharacterFavourite){
+        self.name.text = characterFavourite.name
+        self.type.text = characterFavourite.type.capitalized
+        let imageUrl = URL(string: characterFavourite.urlImage)
+        imageCharacter.kf.setImage(with: imageUrl)
     }
 }

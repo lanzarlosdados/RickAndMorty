@@ -75,6 +75,11 @@
                 <constraint firstItem="vJ0-wH-rhR" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottom" constant="-5" id="rlx-y5-vpH"/>
                 <constraint firstItem="njF-e1-oar" firstAttribute="trailing" secondItem="vJ0-wH-rhR" secondAttribute="trailing" constant="16" id="tUp-qH-y1c"/>
             </constraints>
+            <connections>
+                <outlet property="imageCharacter" destination="1YE-wy-gSn" id="okC-kF-dcV"/>
+                <outlet property="name" destination="XVU-od-pTY" id="ONp-Im-CgV"/>
+                <outlet property="type" destination="tIL-0n-Agr" id="YUi-Dt-LO7"/>
+            </connections>
             <point key="canvasLocation" x="33.587786259541986" y="-26.056338028169016"/>
         </tableViewCell>
     </objects>

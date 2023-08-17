@@ -6,32 +6,53 @@
 //
 
 import UIKit
+import Combine
 
-class CharactersFavoutitesViewController: BaseViewController {
+final class CharactersFavoutitesViewController: BaseViewController, BaseViewProtocol {
 
     @IBOutlet weak var tableView: UITableView!
+    var charactersFavourite : [CharacterFavourite] = []
+    var viewModel = CharactersFavouriteViewModel()
+    private var anyCancellable = Set<AnyCancellable>()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.delegate = self
         configTableView()
+        subscriptions()
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        viewModel.getCharactersFavourite()
+    }
+    
     private func configTableView(){
         tableView.configure(delegate: self, dataSource: self, cells: [
             CharactersFavouritesCell.self])
     }
+    
+    private func subscriptions(){
+           viewModel.postObservable.sink { error in
+               print("error: ", error)
+           } receiveValue: {[weak self] in
+               self?.charactersFavourite = self?.viewModel.charactersFavourite ?? []
+               self?.tableView.reloadData()
+           }.store(in: &anyCancellable)
+       }
 
 }
 extension CharactersFavoutitesViewController:  UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return charactersFavourite.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(for:  CharactersFavouritesCell.self, for: indexPath)
-        cell.configCell()
+        print(charactersFavourite[indexPath.row] as Any)
+        cell.configCell(characterFavourite: charactersFavourite[indexPath.row])
         return cell
     }
     

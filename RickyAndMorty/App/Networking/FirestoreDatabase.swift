@@ -9,18 +9,18 @@ import Foundation
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
-struct CharactersFavourite: Decodable , Identifiable {
+struct CharacterFavourite: Decodable , Identifiable {
     @DocumentID var id: String?
     let name : String
     let type : String
     let urlImage: String
 }
 
-class FirestoreDatabase {
+final class FirestoreDatabase {
     private let dataBase = Firestore.firestore()
     private let collection = "CharactersFavourite"
     
-    func getCharactersFavourite(completion: @escaping (Result<[CharactersFavourite],Error>) -> Void){
+    func getCharactersFavourite(completion: @escaping (Result<[CharacterFavourite],Error>) -> Void){
         dataBase.collection(collection)
             .addSnapshotListener { querySnapshot, error in
                 if let error = error {
@@ -32,9 +32,9 @@ class FirestoreDatabase {
                     completion(.success([]))
                     return
                 }
-                let charactersFavourite = documents.map { try? $0.data(as: CharactersFavourite.self) }
+                let charactersFavourite = documents.map { try? $0.data(as: CharacterFavourite.self) }
                     .compactMap { $0 }
-                
+                print("charactersFavourite", charactersFavourite)
                 completion(.success(charactersFavourite))
             }
     }

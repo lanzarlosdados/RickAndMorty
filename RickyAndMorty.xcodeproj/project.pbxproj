@@ -51,6 +51,8 @@
 		065B36582A854C8E00105B18 /* GoogleAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065B36572A854C8E00105B18 /* GoogleAuthentication.swift */; };
 		065D22192A87F1E200A81283 /* ProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065D22182A87F1E200A81283 /* ProfileRepository.swift */; };
 		065D221B2A87F22C00A81283 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065D221A2A87F22C00A81283 /* ProfileViewModel.swift */; };
+		065FA3D62A8E5FF700AEC755 /* CharactersFavouriteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065FA3D52A8E5FF700AEC755 /* CharactersFavouriteRepository.swift */; };
+		065FA3D82A8E60AF00AEC755 /* CharactersFavouriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065FA3D72A8E60AF00AEC755 /* CharactersFavouriteViewModel.swift */; };
 		06604E1A2A7BE43700A500CC /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 06604E192A7BE43700A500CC /* FirebaseAuth */; };
 		06604E1F2A7BEEBD00A500CC /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06604E1D2A7BEEBD00A500CC /* RegisterViewController.swift */; };
 		06604E202A7BEEBD00A500CC /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06604E1E2A7BEEBD00A500CC /* RegisterViewController.xib */; };
@@ -153,6 +155,8 @@
 		065B36572A854C8E00105B18 /* GoogleAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthentication.swift; sourceTree = "<group>"; };
 		065D22182A87F1E200A81283 /* ProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRepository.swift; sourceTree = "<group>"; };
 		065D221A2A87F22C00A81283 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		065FA3D52A8E5FF700AEC755 /* CharactersFavouriteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersFavouriteRepository.swift; sourceTree = "<group>"; };
+		065FA3D72A8E60AF00AEC755 /* CharactersFavouriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersFavouriteViewModel.swift; sourceTree = "<group>"; };
 		06604E1D2A7BEEBD00A500CC /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		06604E1E2A7BEEBD00A500CC /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		06604E222A7C164400A500CC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -258,6 +262,7 @@
 		064F0A412A8BE5E900131BA9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				065FA3D72A8E60AF00AEC755 /* CharactersFavouriteViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -265,6 +270,7 @@
 		064F0A422A8BE60A00131BA9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				065FA3D42A8E5FC300AEC755 /* Repository */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -397,6 +403,14 @@
 			isa = PBXGroup;
 			children = (
 				065D22182A87F1E200A81283 /* ProfileRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		065FA3D42A8E5FC300AEC755 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				065FA3D52A8E5FF700AEC755 /* CharactersFavouriteRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -1074,8 +1088,10 @@
 				067BED8B2A5F729D00AA1B19 /* AppFactory.swift in Sources */,
 				0626EE9C2A81BB2C0002F6B6 /* String+ValidityType.swift in Sources */,
 				065AE9E62A6580D800A0E9CF /* CharactersProviderProtocol.swift in Sources */,
+				065FA3D82A8E60AF00AEC755 /* CharactersFavouriteViewModel.swift in Sources */,
 				06604E2E2A7C256C00A500CC /* AuthenticationRepository.swift in Sources */,
 				0683CF292A6D727200E18293 /* LocationProvider.swift in Sources */,
+				065FA3D62A8E5FF700AEC755 /* CharactersFavouriteRepository.swift in Sources */,
 				065D221B2A87F22C00A81283 /* ProfileViewModel.swift in Sources */,
 				06604E1F2A7BEEBD00A500CC /* RegisterViewController.swift in Sources */,
 				0683CF262A6D723D00E18293 /* LocationsPresenter.swift in Sources */,
