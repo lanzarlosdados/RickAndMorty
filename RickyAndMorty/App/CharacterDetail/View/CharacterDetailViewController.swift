@@ -70,6 +70,7 @@ extension CharacterDetailViewController : UITableViewDelegate, UITableViewDataSo
             nameStatus.textColor = character[indexPath.row].status == Status.alive ? UIColor.green : UIColor.red
             nameCharacter.text = character[indexPath.row].name
             nameStatus.text = "( \(character[indexPath.row].status.rawValue) )"
+            characterCell.touch = true
             characterCell.configCell(character: character[indexPath.row])
             return characterCell
             

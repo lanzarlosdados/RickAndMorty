@@ -32,6 +32,7 @@ struct Character: Codable {
     let episode: [String]
     let url: String
     let created: String
+    var isFavorite: Bool?
 }
 enum Gender: String, Codable {
     case female = "Female"

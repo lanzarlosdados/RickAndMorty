@@ -20,12 +20,22 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hTJ-Mi-4N8" customClass="CardView" customModule="RickyAndMorty" customModuleProvider="target">
                         <rect key="frame" x="2" y="0.0" width="197" height="305"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="noj-Rj-c9K">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2aK-hC-ZwL">
                                 <rect key="frame" x="0.0" y="0.0" width="197" height="170"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="noj-Rj-c9K">
+                                        <rect key="frame" x="0.0" y="0.0" width="197" height="170"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="170" id="o8d-xU-OVF"/>
+                                    <constraint firstItem="noj-Rj-c9K" firstAttribute="leading" secondItem="2aK-hC-ZwL" secondAttribute="leading" id="G9U-6I-QCx"/>
+                                    <constraint firstAttribute="bottom" secondItem="noj-Rj-c9K" secondAttribute="bottom" id="KqR-hU-M8o"/>
+                                    <constraint firstAttribute="trailing" secondItem="noj-Rj-c9K" secondAttribute="trailing" id="nkM-FD-2Tr"/>
+                                    <constraint firstItem="noj-Rj-c9K" firstAttribute="top" secondItem="2aK-hC-ZwL" secondAttribute="top" id="xXw-Da-mCQ"/>
+                                    <constraint firstAttribute="height" constant="170" id="zdy-mR-qF8"/>
                                 </constraints>
-                            </imageView>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ya-r7-Gqh">
                                 <rect key="frame" x="5" y="5" width="12" height="12"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
@@ -53,10 +63,10 @@
                             <constraint firstItem="pHR-Bq-6xb" firstAttribute="leading" secondItem="hTJ-Mi-4N8" secondAttribute="leading" id="HEq-ZT-zON"/>
                             <constraint firstAttribute="bottom" secondItem="pHR-Bq-6xb" secondAttribute="bottom" constant="10" id="KGs-UV-4fQ"/>
                             <constraint firstItem="8Ya-r7-Gqh" firstAttribute="top" secondItem="hTJ-Mi-4N8" secondAttribute="top" constant="5" id="L97-fy-obr"/>
-                            <constraint firstItem="noj-Rj-c9K" firstAttribute="leading" secondItem="hTJ-Mi-4N8" secondAttribute="leading" id="LOU-u6-sfJ"/>
-                            <constraint firstItem="noj-Rj-c9K" firstAttribute="top" secondItem="hTJ-Mi-4N8" secondAttribute="top" id="b5I-5a-mz8"/>
-                            <constraint firstItem="pHR-Bq-6xb" firstAttribute="top" secondItem="noj-Rj-c9K" secondAttribute="bottom" constant="10" id="hxL-8k-9dR"/>
-                            <constraint firstAttribute="trailing" secondItem="noj-Rj-c9K" secondAttribute="trailing" id="rhB-Zy-O2d"/>
+                            <constraint firstItem="pHR-Bq-6xb" firstAttribute="top" secondItem="2aK-hC-ZwL" secondAttribute="bottom" constant="10" id="QvS-F3-hP8"/>
+                            <constraint firstItem="2aK-hC-ZwL" firstAttribute="top" secondItem="hTJ-Mi-4N8" secondAttribute="top" id="kbC-Qq-n53"/>
+                            <constraint firstItem="2aK-hC-ZwL" firstAttribute="leading" secondItem="hTJ-Mi-4N8" secondAttribute="leading" id="wTr-qU-9ll"/>
+                            <constraint firstAttribute="trailing" secondItem="2aK-hC-ZwL" secondAttribute="trailing" id="zXS-Lq-CpH"/>
                         </constraints>
                     </view>
                 </subviews>

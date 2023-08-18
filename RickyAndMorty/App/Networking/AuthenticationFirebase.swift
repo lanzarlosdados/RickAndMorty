@@ -19,12 +19,6 @@ final class AuthenticationFirebase{
     
     func uploadMedia(imageProfile: UIImage,completion: @escaping (_ url: String?) -> Void) {
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        let date = Date()
-        dateFormatter.locale = Locale(identifier: "en_US")
-        
-        
         guard let userId = Auth.auth().currentUser?.uid else {return}
         let imageName = "imageProfile.png"
         let storageRef = storageRef.child(userId).child(imageName)
