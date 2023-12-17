@@ -15,7 +15,6 @@ final class CharactersFavoutitesViewController: BaseViewController, BaseViewProt
     var viewModel = CharactersFavouriteViewModel()
     private var anyCancellable = Set<AnyCancellable>()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.delegate = self

@@ -9,8 +9,9 @@ import Foundation
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
-struct CharacterFavourite: Decodable , Identifiable {
+struct CharacterFavourite: Codable , Identifiable {
     @DocumentID var id: String?
+    let idCharacter : String
     let name : String
     let type : String
     let urlImage: String
@@ -39,4 +40,14 @@ final class FirestoreDatabase {
             }
     }
     
+    func addCharacterFavourite(characterFavourite : CharacterFavourite,
+                               completion: @escaping (Result<CharacterFavourite,Error>) -> Void){
+        do {
+            _ = try dataBase.collection(collection).addDocument(from: characterFavourite)
+            completion(.success(characterFavourite))
+        }catch{
+            completion(.failure(error))
+        }
+        
+    }
 }

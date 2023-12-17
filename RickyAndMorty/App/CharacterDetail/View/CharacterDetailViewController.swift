@@ -17,6 +17,7 @@ class CharacterDetailViewController: BaseViewController {
     lazy var presenter = CharacterDetailPresenter(delegate: self)
     private var dataObject : [[Any]] = []
     private var dataSectionTitleList : [String] = []
+    private var isFavourite: Bool = false
     var characterId = ""
 
     
@@ -28,6 +29,9 @@ class CharacterDetailViewController: BaseViewController {
         }
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        print(self.isFavourite as Any)
+    }
     func configTableView(){
         tableView.configure(delegate: self,
                             dataSource: self,
@@ -36,19 +40,17 @@ class CharacterDetailViewController: BaseViewController {
                                 EpisodesDescripcionTableViewCell.self
                             ])
         tableView.registerFromClass(headerFooterView: SectionTitleView.self)
-
     }
-
 }
 
 extension CharacterDetailViewController : CharacterDetailViewProtocol {
-    
-    func getData(list: [[Any]], sectionTitleList: [String]) {
+    func getData(list: [[Any]], sectionTitleList: [String], isFavourite: Bool) {
         dataObject = list
         dataSectionTitleList = sectionTitleList
+        self.isFavourite = isFavourite
         tableView.reloadData()
     }
-    
+
 }
 
 extension CharacterDetailViewController : UITableViewDelegate, UITableViewDataSource {
@@ -70,8 +72,11 @@ extension CharacterDetailViewController : UITableViewDelegate, UITableViewDataSo
             nameStatus.textColor = character[indexPath.row].status == Status.alive ? UIColor.green : UIColor.red
             nameCharacter.text = character[indexPath.row].name
             nameStatus.text = "( \(character[indexPath.row].status.rawValue) )"
-            characterCell.touch = true
             characterCell.configCell(character: character[indexPath.row])
+            characterCell.isFavourite = self.isFavourite
+            characterCell.touchHeart = {
+                self.isFavourite = characterCell.isFavourite
+            }
             return characterCell
             
         }else if let episode = item as? [Episode] {

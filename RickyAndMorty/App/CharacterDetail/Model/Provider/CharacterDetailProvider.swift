@@ -12,8 +12,7 @@ protocol CharacterDetailProviderProtocol : AnyObject {
     func getEpisodesByIds(episodeIds : String) async throws -> [Episode]
 }
 
-
-class CharacterDetailProvider : CharacterDetailProviderProtocol {
+final class CharacterDetailProvider : CharacterDetailProviderProtocol {
     
     func getCharacterById(characterId: String) async throws -> Character {
         

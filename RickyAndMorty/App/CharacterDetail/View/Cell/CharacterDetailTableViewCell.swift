@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import Combine
 
 class CharacterDetailTableViewCell: UITableViewCell {
 
@@ -16,25 +17,34 @@ class CharacterDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var gender: UILabel!
     @IBOutlet weak var specie: UILabel!
     @IBOutlet weak var imageCharacter: UIImageView!
-    var touch = false
+    var touchHeart: (()->Void)?
+
+    var isFavourite = false {
+        didSet {
+            self.configButtonHeart(self.heartButton)
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        imageCharacter.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        imageCharacter.layer.maskedCorners = [
+            .layerMinXMinYCorner,
+            .layerMaxXMinYCorner
+        ]
         imageCharacter.layer.cornerRadius = 8
-        isFavorite(self.heartButton)
     }
-    
+
     @IBAction func heartButtonAction(_ button: UIButton) {
-       isFavorite(button)
+        self.isFavourite = !self.isFavourite
+        touchHeart?()
     }
     
-    private func isFavorite(_ button: UIButton){
-        touch = !touch
+    private func configButtonHeart(_ button: UIButton){
         UIView.animate(withDuration: 0.3) {
-            if(self.touch){
+            if(self.isFavourite){
                 button.setImage(UIImage(systemName: "heart.fill"), for: .normal)
             }else{
+                
                 button.setImage(UIImage(systemName: "heart"), for: .normal)
             }
             self.layoutIfNeeded()

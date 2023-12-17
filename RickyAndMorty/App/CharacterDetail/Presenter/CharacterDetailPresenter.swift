@@ -8,8 +8,11 @@
 import Foundation
 
 protocol CharacterDetailViewProtocol : AnyObject, BaseViewProtocol{
-    func getData(list : [[Any]],sectionTitleList : [String])
+    func getData(list : [[Any]],
+                 sectionTitleList : [String],
+                 isFavourite: Bool)
 }
+
 @MainActor
 class CharacterDetailPresenter{
     
@@ -17,9 +20,12 @@ class CharacterDetailPresenter{
     weak var delegate : CharacterDetailViewProtocol?
     private var dataVideos : [[Any]] = []
     private var sectionTitleList : [String] = []
+    private var isFavourite: Bool = false
+    private var characterFavourite: [CharacterFavourite] = []
     
     
-    init(provider: CharacterDetailProviderProtocol = CharacterDetailProvider() , delegate: CharacterDetailViewProtocol) {
+    init(provider: CharacterDetailProviderProtocol = CharacterDetailProvider() ,
+         delegate: CharacterDetailViewProtocol) {
         self.provider = provider
         self.delegate = delegate
 //        #if DEBUG
@@ -29,6 +35,7 @@ class CharacterDetailPresenter{
 //        #endif
     }
     
+
     func getCharacterById(id : String) async{
         dataVideos.removeAll()
         sectionTitleList.removeAll()
@@ -43,6 +50,7 @@ class CharacterDetailPresenter{
                 delegate?.loadingView(.hide)
             }
             let (response) = await (try character)
+            
             dataVideos.append([response])
             sectionTitleList.append("")
 
@@ -60,7 +68,9 @@ class CharacterDetailPresenter{
             print("error",error)
         }
         
-        delegate?.getData(list: dataVideos,sectionTitleList: sectionTitleList)
+        delegate?.getData(list: dataVideos,
+                          sectionTitleList: sectionTitleList,
+                          isFavourite: isFavourite)
     }
     
     func getEpisodesByIds(episodesIds: String) async -> [Episode]?{

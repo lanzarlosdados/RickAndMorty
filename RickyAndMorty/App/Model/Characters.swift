@@ -6,6 +6,9 @@
 //
 // hola como estas
 import Foundation
+import FirebaseFirestore
+import FirebaseFirestoreSwift
+
 // MARK: - Welcome
 struct Characters : Codable {
     let info: Info
@@ -32,7 +35,6 @@ struct Character: Codable {
     let episode: [String]
     let url: String
     let created: String
-    var isFavorite: Bool?
 }
 enum Gender: String, Codable {
     case female = "Female"

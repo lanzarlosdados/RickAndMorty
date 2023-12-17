@@ -33,4 +33,19 @@ final class CharactersFavouriteViewModel {
             }
         }
     }
+    
+    func addCharacterFavourite(characterFavourite: CharacterFavourite){
+        delegate?.loadingView(.show)
+        repository.addCharacterFavourite(characterFavourite: characterFavourite) { result in
+            switch result {
+            case .success(let charactersFavourite):
+                print(charactersFavourite as Any)
+                self.postObservable.send()
+                self.delegate?.loadingView(.hide)
+            case .failure(let error):
+                self.delegate?.showError(error.localizedDescription, callback: nil)
+            }
+        }
+    }
+
 }

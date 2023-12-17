@@ -13,4 +13,9 @@ final class CharactersFavouriteRepository {
     func getCharactersFavourite(completion: @escaping (Result<[CharacterFavourite],Error>) -> Void){
         firestoreDatabase.getCharactersFavourite(completion: completion)
     }
+    
+    func addCharacterFavourite(characterFavourite: CharacterFavourite,
+                               completion: @escaping (Result<CharacterFavourite,Error>) -> Void){
+        firestoreDatabase.addCharacterFavourite(characterFavourite: characterFavourite, completion: completion)
+    }
 }

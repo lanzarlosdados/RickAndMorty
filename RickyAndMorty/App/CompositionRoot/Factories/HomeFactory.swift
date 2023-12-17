@@ -11,12 +11,9 @@ protocol HomeFactory {
     func makeModule() -> UIViewController
 }
 
-
 struct HomeFactoryImp : HomeFactory {
     
     func makeModule() -> UIViewController {
         return LoginViewController()
     }
-    
-    
 }

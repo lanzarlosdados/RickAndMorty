@@ -18,8 +18,8 @@ class CharactersPresenter{
     weak var delegate : CharactersViewProtocol?
     private var data : [Character] = []
     
-    
-    init(provider: CharactersProviderProtocol = CharactersProvider() , delegate: CharactersViewProtocol) {
+    init(provider: CharactersProviderProtocol = CharactersProvider(),
+         delegate: CharactersViewProtocol) {
         self.provider = provider
         self.delegate = delegate
 //        #if DEBUG
@@ -42,7 +42,7 @@ class CharactersPresenter{
         }catch{
             print("error",error)
         }
-        
+            
         delegate?.getData(list:data)
     }
     
