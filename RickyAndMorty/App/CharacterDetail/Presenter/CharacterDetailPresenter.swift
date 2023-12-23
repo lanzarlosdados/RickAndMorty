@@ -78,7 +78,7 @@ class CharacterDetailPresenter{
             let episodes = try await provider.getEpisodesByIds(episodeIds: episodesIds)
             return episodes
         }catch{
-            print("error",error)
+            print("erro",error)
             return nil
         }
     }
