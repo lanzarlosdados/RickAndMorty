@@ -1,2 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-RickyAndMorty/Pods-RickyAndMorty-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
+${BUILT_PRODUCTS_DIR}/SDWebImageSwiftUI/SDWebImageSwiftUI.framework

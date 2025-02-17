@@ -12,7 +12,7 @@ protocol CharactersViewProtocol : AnyObject, BaseViewProtocol {
 }
 
 @MainActor
-class CharactersPresenter{
+class CharactersPresenter {
     
     private var provider : CharactersProviderProtocol
     weak var delegate : CharactersViewProtocol?
@@ -29,7 +29,7 @@ class CharactersPresenter{
 //        #endif
     }
     
-    func getCharacters() async{
+    func getCharacters() async {
         
         delegate?.loadingView(.show)
         async let characters = try await provider.getAllCharacters().results
@@ -47,3 +47,5 @@ class CharactersPresenter{
     }
     
 }
+
+

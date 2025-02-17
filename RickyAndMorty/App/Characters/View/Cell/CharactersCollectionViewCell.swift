@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Kingfisher
+import SwiftUI
 
 class CharactersCollectionViewCell: UICollectionViewCell {
 
@@ -16,14 +16,16 @@ class CharactersCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        imageCharacter.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        imageCharacter.layer.cornerRadius = 8
+        layer.cornerRadius = 8
+        layer.masksToBounds = true
+        clipsToBounds = true
     }
     
-    func configCell(character : Character) {
-        characterName.text = character.name
-        statusView.backgroundColor = (character.status == Status.alive) ? UIColor.green : UIColor.red
-        let imageUrl = URL(string: character.image)
-        imageCharacter.kf.setImage(with: imageUrl)
+    func configCell(character: Character) {
+        let contentConfiguration = UIHostingConfiguration {
+            CharactersView(character: character)
+        }
+        
+        self.contentConfiguration = contentConfiguration
     }
 }

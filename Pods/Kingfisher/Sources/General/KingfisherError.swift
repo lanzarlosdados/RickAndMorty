@@ -25,6 +25,11 @@
 //  THE SOFTWARE.
 
 import Foundation
+#if os(macOS)
+import AppKit
+#else
+import UIKit
+#endif
 
 extension Never {}
 
@@ -454,7 +459,7 @@ extension KingfisherError.ImageSettingErrorReason {
         case .dataProviderError(let provider, let error):
             return "Image data provider fails to provide data. Provider: \(provider), error: \(error)"
         case .alternativeSourcesExhausted(let errors):
-            return "Image setting from alternaive sources failed: \(errors)"
+            return "Image setting from alternative sources failed: \(errors)"
         }
     }
     

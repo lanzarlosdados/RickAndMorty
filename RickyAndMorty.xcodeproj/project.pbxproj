@@ -30,7 +30,7 @@
 		0656FA862A69F38400AA0CB8 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656FA852A69F38400AA0CB8 /* TabBar.swift */; };
 		0656FA8B2A6A060D00AA0CB8 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0656FA892A6A060D00AA0CB8 /* LocationCell.swift */; };
 		0656FA8C2A6A060D00AA0CB8 /* LocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0656FA8A2A6A060D00AA0CB8 /* LocationCell.xib */; };
-		065725042A7549EE004B2F1F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065725032A7549EE004B2F1F /* BaseViewController.swift */; };
+		065725042A7549EE004B2F1F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065725032A7549EE004B2F1F /* BaseViewController.swift */; platformFilter = ios; };
 		065725082A755CDE004B2F1F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065725062A755CDE004B2F1F /* LoginViewController.swift */; };
 		065725092A755CDE004B2F1F /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 065725072A755CDE004B2F1F /* LoginViewController.xib */; };
 		06573D562A79ECB1003B4466 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 06573D552A79ECB1003B4466 /* FirebaseAnalytics */; };
@@ -87,6 +87,8 @@
 		0683CF3B2A6F47EE00E18293 /* CharacterDetailProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0683CF3A2A6F47EE00E18293 /* CharacterDetailProvider.swift */; };
 		0683CF3D2A6F47FE00E18293 /* CharacterDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0683CF3C2A6F47FE00E18293 /* CharacterDetailPresenter.swift */; };
 		06A78E462D62384300C1D32E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 06A78E452D62384300C1D32E /* GoogleService-Info.plist */; };
+		06A78E492D625B8200C1D32E /* CharactersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A78E482D625B8200C1D32E /* CharactersView.swift */; };
+		06A78E4D2D62A99200C1D32E /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A78E4C2D62A99200C1D32E /* ImageLoader.swift */; };
 		06B9C7A02A3A8871009C6FFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06B9C79F2A3A8871009C6FFD /* Assets.xcassets */; };
 		06B9C7A32A3A8871009C6FFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06B9C7A12A3A8871009C6FFD /* LaunchScreen.storyboard */; };
 		29DE1A22D4C5B9F96C285791 /* Pods_RickyAndMorty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7465DB8603B9F898FDC32DD5 /* Pods_RickyAndMorty.framework */; };
@@ -165,6 +167,8 @@
 		0683CF3A2A6F47EE00E18293 /* CharacterDetailProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailProvider.swift; sourceTree = "<group>"; };
 		0683CF3C2A6F47FE00E18293 /* CharacterDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailPresenter.swift; sourceTree = "<group>"; };
 		06A78E452D62384300C1D32E /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		06A78E482D625B8200C1D32E /* CharactersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersView.swift; sourceTree = "<group>"; };
+		06A78E4C2D62A99200C1D32E /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		06B9C7932A3A886F009C6FFD /* RickyAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickyAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06B9C7962A3A886F009C6FFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06B9C7982A3A886F009C6FFD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -296,6 +300,7 @@
 		0654BAC52A62EFD300DA348B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				06A78E482D625B8200C1D32E /* CharactersView.swift */,
 				0654BAC72A62F29800DA348B /* Cell */,
 				0654BABF2A62EF8E00DA348B /* CharactersViewController.swift */,
 				0654BAC02A62EF8E00DA348B /* CharactersViewController.xib */,
@@ -687,6 +692,7 @@
 				067BED5A2A5F1CE700AA1B19 /* Utils.swift */,
 				065725032A7549EE004B2F1F /* BaseViewController.swift */,
 				0626EE9D2A81BF710002F6B6 /* ValidateForm.swift */,
+				06A78E4C2D62A99200C1D32E /* ImageLoader.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -977,6 +983,7 @@
 				0657B1872A72ED48000AC576 /* CharactersCollectionViewCell.swift in Sources */,
 				065B36582A854C8E00105B18 /* GoogleAuthentication.swift in Sources */,
 				06604E2C2A7C23D200A500CC /* AuthenticationFirebase.swift in Sources */,
+				06A78E492D625B8200C1D32E /* CharactersView.swift in Sources */,
 				067BED8A2A5F729D00AA1B19 /* AppDelegate.swift in Sources */,
 				065AE9EB2A66065D00A0E9CF /* CharacterDetailViewController.swift in Sources */,
 				065AE9F02A660A4400A0E9CF /* CharacterDetailTableViewCell.swift in Sources */,
@@ -985,6 +992,7 @@
 				0626EE9C2A81BB2C0002F6B6 /* String+ValidityType.swift in Sources */,
 				065AE9E62A6580D800A0E9CF /* CharactersProviderProtocol.swift in Sources */,
 				065FA3D82A8E60AF00AEC755 /* CharactersFavouriteViewModel.swift in Sources */,
+				06A78E4D2D62A99200C1D32E /* ImageLoader.swift in Sources */,
 				06604E2E2A7C256C00A500CC /* AuthenticationRepository.swift in Sources */,
 				0683CF292A6D727200E18293 /* LocationProvider.swift in Sources */,
 				065FA3D62A8E5FF700AEC755 /* CharactersFavouriteRepository.swift in Sources */,
@@ -1164,9 +1172,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fabianzarate.RickyAndMorty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1193,9 +1205,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fabianzarate.RickyAndMorty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
